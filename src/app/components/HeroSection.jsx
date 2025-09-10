@@ -20,6 +20,23 @@ export default function HeroSection() {
     console.log('File info:', file.name, file.size);
   };
 
+  const handleReset = () => {
+    // Phase 1: Fade out inventory (0.2s)
+    setShowInventory(false);
+    
+    // Phase 2: After inventory fades, shrink card and slide title back (0.35s)
+    setTimeout(() => {
+      setShowMaterials(false);
+      setHideTitle(false);
+      setRemoveTitle(false);
+      
+      // Phase 3: Reset to initial state after animations complete
+      setTimeout(() => {
+        setMaterialList([]);
+      }, 400); // Wait for card shrink animation
+    }, 200); // Wait for inventory fade
+  };
+
 
   return (
     <div className="h-screen relative overflow-hidden">
@@ -129,7 +146,7 @@ export default function HeroSection() {
                 animate={{ opacity: showInventory ? 1 : 0 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
               >
-                {showInventory && <MinecraftInventory materials={materialList} />}
+                {showInventory && <MinecraftInventory materials={materialList} onReset={handleReset} />}
               </motion.div>
             ) : (
               <FileUpload onFileProcessed={handleFileProcessed} />

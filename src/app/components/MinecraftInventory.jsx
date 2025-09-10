@@ -6,7 +6,7 @@ import InventorySlot from './InventorySlot';
 import MinecraftLoader from './MinecraftLoader';
 import { processInventoryItems, splitIntoPages } from '../utils/minecraftAssets';
 
-export default function MinecraftInventory({ materials }) {
+export default function MinecraftInventory({ materials, onReset }) {
   const [processedItems, setProcessedItems] = useState([]);
   const [inventoryPages, setInventoryPages] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -152,8 +152,8 @@ export default function MinecraftInventory({ materials }) {
         transition={{ delay: 1.0 }}
       >
         <button
-          onClick={() => window.location.reload()}
-          className="bg-gray-700 hover:bg-gray-600 text-white font-minecraft px-6 py-3 rounded-lg transition-colors"
+          onClick={onReset}
+          className="bg-black hover:bg-gray-900 active:bg-black text-white font-minecraft px-8 py-4 text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer border-2 border-gray-800 hover:border-gray-600 hover:scale-105 active:scale-95"
         >
           Upload Another File
         </button>
