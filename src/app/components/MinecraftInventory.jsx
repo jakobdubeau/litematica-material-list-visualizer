@@ -64,7 +64,7 @@ export default function MinecraftInventory({ materials }) {
       {/* Double Chest GUI */}
       <div
         className="relative mx-auto"
-        style={{ width: '528px', height: '333px' }}
+        style={{ width: '739px', height: '466px' }}
       >
         {/* Chest Background Image */}
         <div
@@ -77,12 +77,12 @@ export default function MinecraftInventory({ materials }) {
 
         {/* Inventory Grid - Double Chest (6 rows x 9 columns) */}
         <div
-          className="absolute grid grid-cols-9 gap-[3px] p-3"
+          className="absolute grid grid-cols-9 gap-[4px] p-4"
           style={{
-            top: '25px',
-            left: '11px',
-            width: '507px',
-            height: '282px',
+            top: '35px',
+            left: '15px',
+            width: '710px',
+            height: '395px',
           }}
         >
           <AnimatePresence mode="wait">

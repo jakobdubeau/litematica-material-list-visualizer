@@ -9,6 +9,7 @@ export default function HeroSection() {
   const [materialList, setMaterialList] = useState([]);
   const [showMaterials, setShowMaterials] = useState(false);
   const [hideTitle, setHideTitle] = useState(false);
+  const [removeTitle, setRemoveTitle] = useState(false);
 
   const handleFileProcessed = (materials, file) => {
     setMaterialList(materials);
@@ -35,17 +36,23 @@ export default function HeroSection() {
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Title Section */}
-        <div className="flex-none pt-12 pb-8 px-4 text-center">
-          <motion.div
-            animate={{ 
-              y: hideTitle ? -100 : 0, 
-              opacity: hideTitle ? 0 : 1 
-            }}
-            transition={{ 
-              duration: 0.5, 
-              ease: "easeOut" 
-            }}
-          >
+        {!removeTitle && (
+          <div className="flex-none pt-12 pb-8 px-4 text-center">
+            <motion.div
+              animate={{ 
+                y: hideTitle ? -100 : 0, 
+                opacity: hideTitle ? 0 : 1 
+              }}
+              transition={{ 
+                duration: 0.5, 
+                ease: "easeOut" 
+              }}
+              onAnimationComplete={() => {
+                if (hideTitle) {
+                  setRemoveTitle(true);
+                }
+              }}
+            >
             <motion.h1 
               className="font-minecraft text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
               initial={{ opacity: 0, y: -30 }}
@@ -81,8 +88,9 @@ export default function HeroSection() {
               Material List Visualizer
             </motion.span>
             </motion.h1>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
+        )}
         
         {/* Spacer */}
         <div className="flex-1" />
@@ -90,7 +98,13 @@ export default function HeroSection() {
         {/* Content Card */}
         <div className="flex-none mx-4 mb-8">
           <motion.div 
-            className="modern-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto min-h-[400px] flex flex-col justify-center"
+            className={`modern-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto flex flex-col justify-center ${
+              showMaterials ? 'min-h-[700px]' : 'min-h-[400px]'
+            }`}
+            style={{ 
+              marginTop: showMaterials ? '-300px' : '0px',
+              position: 'relative'
+            }}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
