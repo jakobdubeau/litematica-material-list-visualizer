@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import FileUpload from './FileUpload';
+import MinecraftInventory from './MinecraftInventory';
 
 export default function HeroSection() {
   const [materialList, setMaterialList] = useState([]);
@@ -14,6 +15,7 @@ export default function HeroSection() {
     console.log('Processed materials:', materials);
     console.log('File info:', file.name, file.size);
   };
+
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -80,7 +82,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
           >
-            <FileUpload onFileProcessed={handleFileProcessed} />
+            {showMaterials && materialList.length > 0 ? (
+              <MinecraftInventory materials={materialList} />
+            ) : (
+              <FileUpload onFileProcessed={handleFileProcessed} />
+            )}
           </motion.div>
         </div>
       </div>

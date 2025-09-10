@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
+import MinecraftLoader from './MinecraftLoader';
 
 export default function FileUpload({ onFileProcessed }) {
   const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, success, error
@@ -246,7 +247,7 @@ export default function FileUpload({ onFileProcessed }) {
         )}
 
         {(uploadState === 'uploading' || uploadState === 'processing') && (
-          <MinecraftLoadingBar progress={progress} />
+          <MinecraftLoader />
         )}
 
         {uploadState === 'error' && (
@@ -270,39 +271,3 @@ export default function FileUpload({ onFileProcessed }) {
   );
 }
 
-function MinecraftLoadingBar({ progress }) {
-  const blocks = 20;
-  const filledBlocks = Math.floor((progress / 100) * blocks);
-
-  return (
-    <motion.div 
-      className="w-full max-w-md mx-auto"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
-      <div className="text-white font-minecraft mb-4">Processing...</div>
-      
-      {/* Minecraft-style loading bar */}
-      <div className="bg-gray-800 border-2 border-gray-600 rounded-lg p-2 mb-4">
-        <div className="flex gap-1">
-          {Array.from({ length: blocks }, (_, i) => (
-            <motion.div
-              key={i}
-              className={`
-                h-4 flex-1 border border-gray-700
-                ${i < filledBlocks ? 'bg-green-500' : 'bg-gray-700'}
-              `}
-              initial={{ backgroundColor: '#374151' }}
-              animate={{ 
-                backgroundColor: i < filledBlocks ? '#10B981' : '#374151' 
-              }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-            />
-          ))}
-        </div>
-      </div>
-      
-      <div className="text-gray-400 font-mono text-sm">{progress}%</div>
-    </motion.div>
-  );
-}
