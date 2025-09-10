@@ -44,11 +44,8 @@ export default function MinecraftInventory({ materials }) {
   const uniqueItemTypes = new Set(processedItems.map(item => item.name)).size;
 
   return (
-    <motion.div
+    <div
       className="w-full max-w-4xl mx-auto"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* Page indicator for multi-page inventories */}
       {inventoryPages.length > 1 && (
@@ -65,12 +62,9 @@ export default function MinecraftInventory({ materials }) {
       )}
 
       {/* Double Chest GUI */}
-      <motion.div
+      <div
         className="relative mx-auto"
         style={{ width: '528px', height: '333px' }}
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         {/* Chest Background Image */}
         <div
@@ -108,7 +102,7 @@ export default function MinecraftInventory({ materials }) {
             ))}
           </AnimatePresence>
         </div>
-      </motion.div>
+      </div>
 
       {/* Page Navigation */}
       {inventoryPages.length > 1 && (
@@ -164,6 +158,6 @@ export default function MinecraftInventory({ materials }) {
           Upload Another File
         </button>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

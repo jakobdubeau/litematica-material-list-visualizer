@@ -8,10 +8,12 @@ import MinecraftInventory from './MinecraftInventory';
 export default function HeroSection() {
   const [materialList, setMaterialList] = useState([]);
   const [showMaterials, setShowMaterials] = useState(false);
+  const [hideTitle, setHideTitle] = useState(false);
 
   const handleFileProcessed = (materials, file) => {
     setMaterialList(materials);
     setShowMaterials(true);
+    setHideTitle(true); // Trigger title animation
     console.log('Processed materials:', materials);
     console.log('File info:', file.name, file.size);
   };
@@ -34,16 +36,26 @@ export default function HeroSection() {
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Title Section */}
         <div className="flex-none pt-12 pb-8 px-4 text-center">
-          <motion.h1 
-            className="font-minecraft text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div
+            animate={{ 
+              y: hideTitle ? -100 : 0, 
+              opacity: hideTitle ? 0 : 1 
+            }}
             transition={{ 
-              duration: 0.8, 
-              ease: [0.25, 0.46, 0.45, 0.94],
-              staggerChildren: 0.2
+              duration: 0.5, 
+              ease: "easeOut" 
             }}
           >
+            <motion.h1 
+              className="font-minecraft text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                ease: [0.25, 0.46, 0.45, 0.94],
+                staggerChildren: 0.2
+              }}
+            >
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-gray-100"
               style={{
@@ -68,7 +80,8 @@ export default function HeroSection() {
             >
               Material List Visualizer
             </motion.span>
-          </motion.h1>
+            </motion.h1>
+          </motion.div>
         </div>
         
         {/* Spacer */}
