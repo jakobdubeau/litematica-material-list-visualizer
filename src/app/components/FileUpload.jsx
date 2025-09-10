@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import MinecraftLoader from './MinecraftLoader';
 
 export default function FileUpload({ onFileProcessed }) {
-  const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, success, error
+  const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, error
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [fileName, setFileName] = useState('');
@@ -47,7 +47,7 @@ export default function FileUpload({ onFileProcessed }) {
       // Extended loading to allow for smooth animation transition
       await simulateProgress(100, 'Preparing interface...');
       
-      setUploadState('success');
+      // Skip success state, go directly to processing
       onFileProcessed?.(materials, file);
       
     } catch (err) {
@@ -153,29 +153,6 @@ export default function FileUpload({ onFileProcessed }) {
     multiple: false
   });
 
-  if (uploadState === 'success') {
-    return (
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="text-green-400 text-2xl mb-4 font-minecraft">✓ File Processed Successfully!</div>
-        <p className="text-gray-300 mb-4">Loaded materials from: {fileName}</p>
-        <button
-          onClick={() => {
-            setUploadState('idle');
-            setProgress(0);
-            setFileName('');
-          }}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-minecraft px-6 py-2 rounded-lg transition-colors"
-        >
-          Upload Another File
-        </button>
-      </motion.div>
-    );
-  }
 
   return (
     <div className="text-center">

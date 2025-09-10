@@ -15,7 +15,7 @@ export default function HeroSection() {
   const handleFileProcessed = (materials, file) => {
     setMaterialList(materials);
     setHideTitle(true); // Start title slide up
-    setShowMaterials(true); // Start card size animation
+    setShowMaterials(true); // Start card size animation simultaneously
     console.log('Processed materials:', materials);
     console.log('File info:', file.name, file.size);
   };
@@ -58,12 +58,14 @@ export default function HeroSection() {
           <div className="flex-none pt-12 pb-8 px-4 text-center">
             <motion.div
               animate={{ 
-                y: hideTitle ? -100 : 0, 
-                opacity: hideTitle ? 0 : 1 
+                y: hideTitle ? -200 : 0, 
+                opacity: hideTitle ? 0 : 1,
+                scale: hideTitle ? 0.95 : 1,
+                filter: hideTitle ? 'blur(2px)' : 'blur(0px)'
               }}
               transition={{ 
-                duration: 0.35, 
-                ease: "easeInOut" 
+                duration: 0.4, 
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               onAnimationComplete={() => {
                 if (hideTitle) {
@@ -131,8 +133,8 @@ export default function HeroSection() {
             transition={{ 
               opacity: { duration: 1, delay: 0.5, ease: "easeOut" },
               y: { duration: 1, delay: 0.5, ease: "easeOut" },
-              minHeight: { duration: 0.35, delay: 0, ease: "easeInOut" },
-              marginTop: { duration: 0.35, delay: 0, ease: "easeInOut" }
+              minHeight: { duration: 0.7, delay: 0, ease: [0.16, 1, 0.3, 1] },
+              marginTop: { duration: 0.7, delay: 0, ease: [0.16, 1, 0.3, 1] }
             }}
             onAnimationComplete={() => {
               if (showMaterials && !showInventory) {
@@ -144,7 +146,7 @@ export default function HeroSection() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: showInventory ? 1 : 0 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 {showInventory && <MinecraftInventory materials={materialList} onReset={handleReset} />}
               </motion.div>
