@@ -18,7 +18,7 @@ const minecraft = localFont({
 });
 
 export const metadata = {
-  title: "Litematica Material List Visualizer",
+  title: "Material List",
   description: "Upload and visualize Litematica material lists in a Minecraft-style inventory interface",
   icons: {
     icon: '/favicon.ico',
