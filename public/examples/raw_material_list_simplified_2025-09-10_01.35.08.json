@@ -1,0 +1,87 @@
+[
+  {
+    "RawItem": "minecraft:spruce_log",
+    "TotalEstimate": 2,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:spruce_planks",
+        "ResultTotal": 5
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:short_grass",
+    "TotalEstimate": 51,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:short_grass",
+        "ResultTotal": 51
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:dark_oak_log",
+    "TotalEstimate": 26,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:dark_oak_stairs",
+        "ResultTotal": 26
+      },
+      {
+        "ResultItem": "minecraft:dark_oak_planks",
+        "ResultTotal": 47
+      },
+      {
+        "ResultItem": "minecraft:dark_oak_slab",
+        "ResultTotal": 17
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:grass_block",
+    "TotalEstimate": 2,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:grass_block",
+        "ResultTotal": 2
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:spruce_leaves",
+    "TotalEstimate": 875,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:spruce_leaves",
+        "ResultTotal": 875
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:stripped_dark_oak_log",
+    "TotalEstimate": 40,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:stripped_dark_oak_wood",
+        "ResultTotal": 30
+      }
+    ]
+  },
+  {
+    "RawItem": "minecraft:brown_terracotta",
+    "TotalEstimate": 30,
+    "Steps": [],
+    "Results": [
+      {
+        "ResultItem": "minecraft:brown_terracotta",
+        "ResultTotal": 30
+      }
+    ]
+  }
+]

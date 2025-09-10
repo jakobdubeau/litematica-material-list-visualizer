@@ -1,0 +1,17 @@
++------------------------+-------+---------+-------------+
+| Material List for schematic 'Unnamed' (1 of 1 regions) |
++------------------------+-------+---------+-------------+
+| Item                   | Total | Missing |   Available |
++------------------------+-------+---------+-------------+
+| Spruce Leaves          |   875 |     875 |           1 |
+| Short Grass            |    51 |      51 |           0 |
+| Dark Oak Planks        |    47 |      47 |           0 |
+| Brown Terracotta       |    30 |      30 |           0 |
+| Stripped Dark Oak Wood |    30 |      30 |           0 |
+| Dark Oak Stairs        |    26 |      26 |           0 |
+| Dark Oak Slab          |    17 |      17 |           0 |
+| Spruce Planks          |     5 |       5 |           0 |
+| Grass Block            |     2 |       2 |           1 |
++------------------------+-------+---------+-------------+
+| Item                   | Total | Missing |   Available |
++------------------------+-------+---------+-------------+
