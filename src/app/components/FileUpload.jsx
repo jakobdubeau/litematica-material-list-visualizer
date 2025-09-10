@@ -42,7 +42,10 @@ export default function FileUpload({ onFileProcessed }) {
         materials = parseJsonFile(text);
       }
       
-      await simulateProgress(100, 'Complete!');
+      await simulateProgress(80, 'Complete!');
+      
+      // Extended loading to allow for smooth animation transition
+      await simulateProgress(100, 'Preparing interface...');
       
       setUploadState('success');
       onFileProcessed?.(materials, file);
