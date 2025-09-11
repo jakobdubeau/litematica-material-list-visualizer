@@ -151,12 +151,14 @@ export default function MinecraftInventory({ materials, onReset }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0 }}
       >
-        <button
+        <motion.button
           onClick={onReset}
-          className="bg-black hover:bg-gray-900 active:bg-black text-white font-minecraft px-8 py-4 text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer border-2 border-gray-800 hover:border-gray-600 hover:scale-105 active:scale-95"
+          className="bg-black text-gray-300 hover:text-white font-minecraft px-8 py-3 text-lg rounded-full transition-all duration-300 cursor-pointer hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8),0_0_20px_rgba(255,255,255,0.4)] focus:outline-none"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
         >
           Upload Another File
-        </button>
+        </motion.button>
       </motion.div>
     </div>
   );
