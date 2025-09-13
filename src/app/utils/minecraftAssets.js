@@ -164,16 +164,19 @@ export function processInventoryItems(materials) {
  * @returns {Array} Array of pages, each containing an array of items/null for empty slots
  */
 export function splitIntoPages(items, slotsPerPage = 54) {
+  console.log(`splitIntoPages: ${items.length} items, ${slotsPerPage} slots per page`);
   const pages = [];
   
   for (let i = 0; i < items.length; i += slotsPerPage) {
     const pageItems = items.slice(i, i + slotsPerPage);
+    console.log(`Page ${pages.length + 1}: ${pageItems.length} items before padding`);
     
     // Fill remaining slots with null for empty slots
     while (pageItems.length < slotsPerPage) {
       pageItems.push(null);
     }
     
+    console.log(`Page ${pages.length + 1}: ${pageItems.length} slots after padding`);
     pages.push(pageItems);
   }
   

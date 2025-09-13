@@ -37,7 +37,7 @@ export default function InventorySlot({ item, slotIndex }) {
   return (
     <div className="relative">
       <motion.div
-        className="w-[54px] h-[54px] relative cursor-pointer"
+        className="w-[52px] h-[52px] relative cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         whileHover={{ scale: 1.05 }}
@@ -53,7 +53,7 @@ export default function InventorySlot({ item, slotIndex }) {
               <motion.img
                 src={getImageUrl()}
                 alt={item.displayName}
-                className="w-full h-full object-contain"
+                className="w-[50px] h-[50px] object-contain absolute inset-0 m-auto"
                 style={{ 
                   imageRendering: 'auto',
                   filter: 'none'
@@ -85,14 +85,14 @@ export default function InventorySlot({ item, slotIndex }) {
         <motion.div
           className="absolute z-50 bg-black/95 text-white px-4 py-3 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none"
           style={{
-            left: slotIndex % 9 > 4 ? 'auto' : '100%',
-            right: slotIndex % 9 > 4 ? '100%' : 'auto',
-            bottom: slotIndex >= 45 ? '100%' : 'auto',
-            top: slotIndex >= 45 ? 'auto' : '100%',
-            marginLeft: slotIndex % 9 > 4 ? '-8px' : '8px',
-            marginRight: slotIndex % 9 > 4 ? '8px' : '-8px',
-            marginTop: slotIndex >= 45 ? '-8px' : '8px',
-            marginBottom: slotIndex >= 45 ? '8px' : '-8px',
+            left: slotIndex % 12 > 5 ? 'auto' : '100%',
+            right: slotIndex % 12 > 5 ? '100%' : 'auto',
+            bottom: slotIndex >= 60 ? '100%' : 'auto',
+            top: slotIndex >= 60 ? 'auto' : '100%',
+            marginLeft: slotIndex % 12 > 5 ? '-8px' : '8px',
+            marginRight: slotIndex % 12 > 5 ? '8px' : '-8px',
+            marginTop: slotIndex >= 60 ? '-8px' : '8px',
+            marginBottom: slotIndex >= 60 ? '8px' : '-8px',
           }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

@@ -18,7 +18,7 @@ export default function MinecraftInventory({ materials, onReset }) {
       try {
         // Process materials into inventory items
         const items = processInventoryItems(materials);
-        const pages = splitIntoPages(items, 54); // 54 slots for double chest
+        const pages = splitIntoPages(items, 72); // 72 slots for double chest (12x6)
         
         setProcessedItems(items);
         setInventoryPages(pages);
@@ -76,16 +76,12 @@ export default function MinecraftInventory({ materials, onReset }) {
           </motion.button>
         )}
 
-        <motion.div
-          key={currentPage}
+        <div
           className="relative"
           style={{ 
             width: '780px', 
             height: '492px'
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {/* Chest Background Image for this page - scaled to fit */}
           <div
@@ -97,20 +93,24 @@ export default function MinecraftInventory({ materials, onReset }) {
           />
 
           {/* Inventory Grid for this page - properly aligned with chest GUI */}
-          <div
-            className="absolute grid grid-cols-9 gap-[4px]"
+          <motion.div
+            key={currentPage}
+            className="absolute grid grid-cols-12 gap-x-[61px] gap-y-[12px]"
             style={{
-              top: '38px',
+              top: '53px',
               left: '17px',
-              width: '746px',
-              height: '414px',
-              padding: '5px',
+              width: '624px',
+              height: '360px',
+              padding: '10px',
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {currentPageItems.map((item, itemIndex) => (
               <InventorySlot key={`${currentPage}-${itemIndex}`} item={item} slotIndex={itemIndex} />
             ))}
-          </div>
+          </motion.div>
 
           {/* Subtle glow effect for active chest */}
           <motion.div
@@ -122,7 +122,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           />
-        </motion.div>
+        </div>
 
         {/* Right Arrow - Next Page */}
         {inventoryPages.length > 1 && (
@@ -145,7 +145,7 @@ export default function MinecraftInventory({ materials, onReset }) {
         className="text-center mt-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.0 }}
+        transition={{ delay: 0.3 }}
       >
         <motion.button
           onClick={onReset}
