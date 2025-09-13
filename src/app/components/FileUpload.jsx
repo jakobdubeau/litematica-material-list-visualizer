@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
 import MinecraftLoader from './MinecraftLoader';
+import { getMinecraftName } from '../utils/itemMappingData';
 
 export default function FileUpload({ onFileProcessed }) {
   const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, error
@@ -84,9 +85,13 @@ export default function FileUpload({ onFileProcessed }) {
       // Parse table rows: | Item Name | Total | Missing | Available |
       const match = line.match(/\|\s*([^|]+?)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|/);
       if (match) {
-        const [, name, total, missing, available] = match;
+        const [, displayName, total, missing, available] = match;
+        const cleanDisplayName = displayName.trim();
+        const minecraftName = getMinecraftName(cleanDisplayName);
+        
         materials.push({
-          name: name.trim(),
+          name: minecraftName, // Use minecraft internal name
+          displayName: cleanDisplayName, // Keep original display name
           total: parseInt(total),
           missing: parseInt(missing),
           available: parseInt(available),
@@ -110,8 +115,10 @@ export default function FileUpload({ onFileProcessed }) {
       for (const item of data) {
         // Add raw materials
         if (item.RawItem && item.TotalEstimate) {
+          const minecraftName = item.RawItem.replace('minecraft:', '');
           materials.push({
-            name: item.RawItem.replace('minecraft:', ''),
+            name: minecraftName,
+            displayName: null, // Will be generated from minecraft name
             total: item.TotalEstimate,
             missing: item.TotalEstimate,
             available: 0,
@@ -122,8 +129,10 @@ export default function FileUpload({ onFileProcessed }) {
         // Add result items (crafted items)
         if (item.Results) {
           for (const result of item.Results) {
+            const minecraftName = result.ResultItem.replace('minecraft:', '');
             materials.push({
-              name: result.ResultItem.replace('minecraft:', ''),
+              name: minecraftName,
+              displayName: null, // Will be generated from minecraft name
               total: result.ResultTotal,
               missing: result.ResultTotal,
               available: 0,

@@ -16,8 +16,6 @@ export default function HeroSection() {
     setMaterialList(materials);
     setHideTitle(true); // Start title slide up
     setShowMaterials(true); // Start card size animation simultaneously
-    console.log('Processed materials:', materials);
-    console.log('File info:', file.name, file.size);
   };
 
   const handleReset = () => {

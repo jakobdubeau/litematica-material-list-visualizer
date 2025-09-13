@@ -5,6 +5,34 @@ import { motion } from 'framer-motion';
 
 export default function InventorySlot({ item, slotIndex }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [fallbackIndex, setFallbackIndex] = useState(0);
+  const [currentImageUrl, setCurrentImageUrl] = useState(item?.texture);
+
+  // Get the current image URL to display
+  const getImageUrl = () => {
+    if (!item || !item.texturePaths) return currentImageUrl || item?.texture;
+    
+    // If we have fallback paths, use the current fallback index
+    if (fallbackIndex < item.texturePaths.length) {
+      return item.texturePaths[fallbackIndex];
+    }
+    
+    return currentImageUrl || item?.texture;
+  };
+
+  const handleImageError = () => {
+    if (!item || !item.texturePaths) {
+      return; // No fallbacks available, will show placeholder
+    }
+    
+    // Try the next fallback image
+    const nextIndex = fallbackIndex + 1;
+    if (nextIndex < item.texturePaths.length) {
+      setCurrentImageUrl(item.texturePaths[nextIndex]);
+      setFallbackIndex(nextIndex);
+    }
+    // If we've exhausted all fallbacks, the image will hide itself
+  };
 
   return (
     <div className="relative">
@@ -15,25 +43,25 @@ export default function InventorySlot({ item, slotIndex }) {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.1 }}
       >
-        {/* Slot background - will be styled to match the chest GUI */}
+        {/* Slot background */}
         <div className="absolute inset-0 bg-transparent" />
         
         {item && (
           <>
             {/* Item texture */}
-            {item.texture ? (
+            {getImageUrl() ? (
               <motion.img
-                src={item.texture}
+                src={getImageUrl()}
                 alt={item.displayName}
-                className="w-full h-full object-contain pixelated"
-                style={{ imageRendering: 'pixelated' }}
+                className="w-full h-full object-contain"
+                style={{ 
+                  imageRendering: 'auto',
+                  filter: 'none'
+                }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
-                onError={(e) => {
-                  // Fallback to placeholder if texture fails to load
-                  e.target.style.display = 'none';
-                }}
+                onError={handleImageError}
               />
             ) : (
               // Fallback placeholder for items without textures

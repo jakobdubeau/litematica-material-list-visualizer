@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import InventorySlot from './InventorySlot';
 import MinecraftLoader from './MinecraftLoader';
 import { processInventoryItems, splitIntoPages } from '../utils/minecraftAssets';
@@ -24,7 +24,7 @@ export default function MinecraftInventory({ materials, onReset }) {
         setInventoryPages(pages);
         setCurrentPage(0);
       } catch (error) {
-        console.error('Error processing inventory items:', error);
+        // Error processing inventory items - fail silently for production
       } finally {
         setIsLoading(false);
       }
@@ -35,22 +35,20 @@ export default function MinecraftInventory({ materials, onReset }) {
     }
   }, [materials]);
 
+
   if (isLoading) {
     return <MinecraftLoader />;
   }
 
   const currentPageItems = inventoryPages[currentPage] || [];
-  const totalItems = processedItems.length;
-  const uniqueItemTypes = new Set(processedItems.map(item => item.name)).size;
 
   return (
-    <div
-      className="w-full max-w-4xl mx-auto"
+    <div className="w-full"
     >
-      {/* Page indicator for multi-page inventories */}
+      {/* Page indicator for multi-page inventories - Centered */}
       {inventoryPages.length > 1 && (
         <motion.div
-          className="text-center mb-4 text-white font-minecraft"
+          className="flex justify-center mb-4 text-white font-minecraft"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -61,88 +59,86 @@ export default function MinecraftInventory({ materials, onReset }) {
         </motion.div>
       )}
 
-      {/* Double Chest GUI */}
-      <div
-        className="relative mx-auto"
-        style={{ width: '739px', height: '466px' }}
-      >
-        {/* Chest Background Image */}
-        <div
-          className="absolute inset-0 bg-no-repeat bg-center"
-          style={{
-            backgroundImage: "url('/images/Gui_plastic_chest.png')",
-            backgroundSize: 'contain',
-          }}
-        />
-
-        {/* Inventory Grid - Double Chest (6 rows x 9 columns) */}
-        <div
-          className="absolute grid grid-cols-9 gap-[4px] p-4"
-          style={{
-            top: '35px',
-            left: '15px',
-            width: '710px',
-            height: '395px',
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {currentPageItems.map((item, index) => (
-              <motion.div
-                key={`${currentPage}-${index}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ 
-                  duration: 0.3, 
-                  delay: index * 0.01 // Stagger effect
-                }}
-              >
-                <InventorySlot item={item} slotIndex={index} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
-
-      {/* Page Navigation */}
-      {inventoryPages.length > 1 && (
-        <motion.div
-          className="flex justify-center items-center mt-6 space-x-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-          <button
+      {/* Centered Chest Container with Arrows */}
+      <div className="flex items-center justify-center w-full relative">
+        {/* Left Arrow - Previous Page */}
+        {inventoryPages.length > 1 && (
+          <motion.button
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
-            className="bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:opacity-50 text-white font-minecraft px-4 py-2 rounded-lg transition-colors"
+            className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
+            style={{ left: 'calc(50% - 400px)' }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.2 }}
           >
-            ← Previous
-          </button>
-          
-          <div className="flex space-x-2">
-            {inventoryPages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentPage(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentPage 
-                    ? 'bg-blue-500' 
-                    : 'bg-gray-600 hover:bg-gray-500'
-                }`}
-              />
+            &#60;
+          </motion.button>
+        )}
+
+        <motion.div
+          key={currentPage}
+          className="relative"
+          style={{ 
+            width: '650px', 
+            height: '410px'
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          {/* Chest Background Image for this page - scaled to fit */}
+          <div
+            className="absolute inset-0 bg-no-repeat bg-center"
+            style={{
+              backgroundImage: "url('/images/Gui_plastic_chest.png')",
+              backgroundSize: '100% 100%',
+            }}
+          />
+
+          {/* Inventory Grid for this page - properly aligned with chest GUI */}
+          <div
+            className="absolute grid grid-cols-9 gap-[3px]"
+            style={{
+              top: '32px',
+              left: '14px',
+              width: '622px',
+              height: '345px',
+              padding: '4px',
+            }}
+          >
+            {currentPageItems.map((item, itemIndex) => (
+              <InventorySlot key={`${currentPage}-${itemIndex}`} item={item} slotIndex={itemIndex} />
             ))}
           </div>
 
-          <button
+          {/* Subtle glow effect for active chest */}
+          <motion.div
+            className="absolute inset-0 pointer-events-none rounded-lg"
+            style={{
+              background: "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, transparent 60%)",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          />
+        </motion.div>
+
+        {/* Right Arrow - Next Page */}
+        {inventoryPages.length > 1 && (
+          <motion.button
             onClick={() => setCurrentPage(Math.min(inventoryPages.length - 1, currentPage + 1))}
             disabled={currentPage === inventoryPages.length - 1}
-            className="bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:opacity-50 text-white font-minecraft px-4 py-2 rounded-lg transition-colors"
+            className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
+            style={{ right: 'calc(50% - 400px)' }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.2 }}
           >
-            Next →
-          </button>
-        </motion.div>
-      )}
+            &#62;
+          </motion.button>
+        )}
+      </div>
 
       {/* Back to Upload Button */}
       <motion.div
