@@ -67,7 +67,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
             className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ left: 'calc(50% - 400px)' }}
+            style={{ left: 'calc(50% - 430px)' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
@@ -80,8 +80,8 @@ export default function MinecraftInventory({ materials, onReset }) {
           key={currentPage}
           className="relative"
           style={{ 
-            width: '650px', 
-            height: '410px'
+            width: '780px', 
+            height: '492px'
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,13 +98,13 @@ export default function MinecraftInventory({ materials, onReset }) {
 
           {/* Inventory Grid for this page - properly aligned with chest GUI */}
           <div
-            className="absolute grid grid-cols-9 gap-[3px]"
+            className="absolute grid grid-cols-9 gap-[4px]"
             style={{
-              top: '32px',
-              left: '14px',
-              width: '622px',
-              height: '345px',
-              padding: '4px',
+              top: '38px',
+              left: '17px',
+              width: '746px',
+              height: '414px',
+              padding: '5px',
             }}
           >
             {currentPageItems.map((item, itemIndex) => (
@@ -130,7 +130,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             onClick={() => setCurrentPage(Math.min(inventoryPages.length - 1, currentPage + 1))}
             disabled={currentPage === inventoryPages.length - 1}
             className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ right: 'calc(50% - 400px)' }}
+            style={{ right: 'calc(50% - 430px)' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}

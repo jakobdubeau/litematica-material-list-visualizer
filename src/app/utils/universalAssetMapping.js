@@ -1,4 +1,3 @@
-// AUTO-GENERATED: Universal Asset Mapping System
 // Generated from 1353 PNG files  
 // Coverage: 1323 minecraft items
 
