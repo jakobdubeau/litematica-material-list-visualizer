@@ -230,7 +230,7 @@ export default function FileUpload({ onFileProcessed }) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 2.0 }}
             >
-              Supports .txt and .json files from Litematica
+              Supports .txt files from Litematica
             </motion.p>
           </>
         )}
