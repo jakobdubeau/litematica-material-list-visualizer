@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function MinecraftLoader() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[200px]">
+    <div className="flex flex-col items-center justify-center">
       {/* Loading text */}
       <motion.div
         className="text-center"
