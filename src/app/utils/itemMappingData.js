@@ -193,7 +193,75 @@ const LITEMATICA_DISPLAY_NAME_MAPPINGS = {
   
   // Items and materials
   'Redstone Dust': 'redstone',
-  'Redstone': 'redstone'
+  'Redstone': 'redstone',
+  
+  // Block naming fixes
+  'Amethyst Block': 'block_of_amethyst',
+  'Bamboo Block': 'block_of_bamboo',
+  'Coal Block': 'block_of_coal',
+  'Iron Block': 'block_of_iron',
+  'Gold Block': 'block_of_gold',
+  'Diamond Block': 'block_of_diamond',
+  'Emerald Block': 'block_of_emerald',
+  'Lapis Lazuli Block': 'block_of_lapis_lazuli',
+  'Redstone Block': 'block_of_redstone',
+  'Netherite Block': 'block_of_netherite',
+  'Copper Block': 'copper_block',
+  'Exposed Copper': 'exposed_copper_block',
+  'Weathered Copper': 'weathered_copper_block',
+  'Oxidized Copper': 'oxidized_copper_block',
+  
+  // Waxed copper blocks - use non-waxed display names
+  'Waxed Copper Block': 'copper_block',
+  'Waxed Exposed Copper': 'exposed_copper_block',
+  'Waxed Weathered Copper': 'weathered_copper_block',
+  'Waxed Oxidized Copper': 'oxidized_copper_block',
+  'Waxed Chiseled Copper': 'chiseled_copper',
+  'Waxed Exposed Chiseled Copper': 'exposed_chiseled_copper',
+  'Waxed Weathered Chiseled Copper': 'weathered_chiseled_copper',
+  'Waxed Oxidized Chiseled Copper': 'oxidized_chiseled_copper',
+  'Waxed Cut Copper': 'cut_copper',
+  'Waxed Exposed Cut Copper': 'exposed_cut_copper',
+  'Waxed Weathered Cut Copper': 'weathered_cut_copper',
+  'Waxed Oxidized Cut Copper': 'oxidized_cut_copper',
+  'Waxed Cut Copper Stairs': 'cut_copper_stairs',
+  'Waxed Exposed Cut Copper Stairs': 'exposed_cut_copper_stairs',
+  'Waxed Weathered Cut Copper Stairs': 'weathered_cut_copper_stairs',
+  'Waxed Oxidized Cut Copper Stairs': 'oxidized_cut_copper_stairs',
+  'Waxed Cut Copper Slab': 'cut_copper_slab',
+  'Waxed Exposed Cut Copper Slab': 'exposed_cut_copper_slab',
+  'Waxed Weathered Cut Copper Slab': 'weathered_cut_copper_slab',
+  'Waxed Oxidized Cut Copper Slab': 'oxidized_cut_copper_slab',
+  'Waxed Copper Door': 'copper_door',
+  'Waxed Exposed Copper Door': 'exposed_copper_door',
+  'Waxed Weathered Copper Door': 'weathered_copper_door',
+  'Waxed Oxidized Copper Door': 'oxidized_copper_door',
+  'Waxed Copper Trapdoor': 'copper_trapdoor',
+  'Waxed Exposed Copper Trapdoor': 'exposed_copper_trapdoor',
+  'Waxed Weathered Copper Trapdoor': 'weathered_copper_trapdoor',
+  'Waxed Oxidized Copper Trapdoor': 'oxidized_copper_trapdoor',
+  'Waxed Copper Grate': 'copper_grate',
+  'Waxed Exposed Copper Grate': 'exposed_copper_grate',
+  'Waxed Weathered Copper Grate': 'weathered_copper_grate',
+  'Waxed Oxidized Copper Grate': 'oxidized_copper_grate',
+  'Waxed Copper Bulb': 'copper_bulb',
+  'Waxed Exposed Copper Bulb': 'exposed_copper_bulb',
+  'Waxed Weathered Copper Bulb': 'weathered_copper_bulb',
+  'Waxed Oxidized Copper Bulb': 'oxidized_copper_bulb',
+  
+  'Raw Iron Block': 'block_of_raw_iron',
+  'Raw Copper Block': 'block_of_raw_copper',
+  'Raw Gold Block': 'block_of_raw_gold',
+  'Quartz Block': 'block_of_quartz',
+  'Stripped Bamboo Block': 'block_of_stripped_bamboo',
+  'Path': 'dirt_path',
+  "Jack o'Lantern": 'jack_o_lantern',
+  'Jack o Lantern': 'jack_o_lantern',
+  'Jack-o-Lantern': 'jack_o_lantern',
+  'Jack O Lantern': 'jack_o_lantern',
+  
+  // Banner and block mappings for new textures
+  'Light Gray Banner': 'light_gray_banner'
 };
 
 // Reverse mapping from minecraft name to display name

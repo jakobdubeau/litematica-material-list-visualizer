@@ -98,7 +98,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             className="absolute grid grid-cols-12 gap-x-[61px] gap-y-[12px]"
             style={{
               top: '53px',
-              left: '17px',
+              left: '18px',
               width: '624px',
               height: '360px',
               padding: '10px',

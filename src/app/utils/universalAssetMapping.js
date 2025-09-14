@@ -75,7 +75,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "allium": [
     "/ingame-assets/block_pngs/Allium_(texture)_JE2_BE2.png",
   ],
-  "amethyst_cluster_29_je1_be1 (1)": [
+  "amethyst_cluster": [
     "/ingame-assets/block_pngs/Amethyst_Cluster_29_JE1_BE1 (1).png",
   ],
   "amethyst_shard": [
@@ -743,7 +743,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "chirp": [
     "/ingame-assets/item_pngs/chirp.png",
   ],
-  "chiseled_bookshelf_(s_0)": [
+  "chiseled_bookshelf": [
     "/ingame-assets/block_pngs/Chiseled_Bookshelf_(S_0)_JE2.png",
   ],
   "chiseled_copper": [
@@ -1564,7 +1564,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/glow_item_frame.png",
   ],
   "glow_lichen": [
-    "/ingame-assets/block_pngs/Glow_Lichen_(N)_JE1.png",
+    "/ingame-assets/block_pngs/glow_lichen.png",
   ],
   "glowstone": [
     "/ingame-assets/block_pngs/Glowstone_JE4_BE2.png",
@@ -1827,8 +1827,8 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "item_frame": [
     "/ingame-assets/item_pngs/item_frame.png",
   ],
-  "jack_o%27lantern": [
-    "/ingame-assets/block_pngs/Jack_o%27Lantern_(S)_JE4.png",
+  "jack_o_lantern": [
+    "/ingame-assets/block_pngs/Jack_o'Lantern_(S)_JE4.png",
   ],
   "jigsaw_block": [
     "/ingame-assets/block_pngs/Jigsaw_Block_(S)_JE3_BE2.png",
@@ -3190,7 +3190,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "resin_clump": [
     "/ingame-assets/item_pngs/resin_clump.png",
   ],
-  "respawn_anchor_(0)": [
+  "respawn_anchor": [
     "/ingame-assets/block_pngs/Respawn_Anchor_(0)_JE1.png",
   ],
   "rib_armor_trim": [
@@ -3583,10 +3583,10 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "sunflower": [
     "/ingame-assets/block_pngs/Sunflower_JE2_BE2.png",
   ],
-  "suspicious_gravel_be1_(dusted_0)": [
+  "suspicious_gravel": [
     "/ingame-assets/block_pngs/Suspicious_Gravel_BE1_(dusted_0).png",
   ],
-  "suspicious_sand_(dusted_0)": [
+  "suspicious_sand": [
     "/ingame-assets/block_pngs/Suspicious_Sand_(dusted_0)_JE1_BE1.png",
   ],
   "suspicious_stew": [
@@ -3775,7 +3775,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/warped_hanging_sign.png",
   ],
   "warped_hyphae": [
-    "/ingame-assets/block_pngs/Warped_Hyphae_(UD)_JE1_BE1.png",
+    "/ingame-assets/block_pngs/warped_hyphae.png",
   ],
   "warped_nylium": [
     "/ingame-assets/block_pngs/Warped_Nylium_JE1_BE1.png",
@@ -3802,7 +3802,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/block_pngs/Warped_Stairs_(N)_JE1_BE1.png",
   ],
   "warped_stem": [
-    "/ingame-assets/block_pngs/Warped_Stem_(UD)_JE2_BE1.png",
+    "/ingame-assets/block_pngs/warped_stem.png",
   ],
   "warped_trapdoor": [
     "/ingame-assets/block_pngs/Warped_Trapdoor_JE1_BE1.png",
@@ -4002,6 +4002,90 @@ export const UNIVERSAL_ASSET_MAPPING = {
   ],
   "zombie_head": [
     "/ingame-assets/block_pngs/Zombie_Head_(S)_JE2.png",
+  ],
+  "black_banner": [
+    "/ingame-assets/block_pngs/black_banner.png",
+  ],
+  "blue_banner": [
+    "/ingame-assets/block_pngs/blue_banner.png",
+  ],
+  "brown_banner": [
+    "/ingame-assets/block_pngs/brown_banner.png",
+  ],
+  "calibrated_sculk_sensor": [
+    "/ingame-assets/block_pngs/calibrated_skulk_sensor.png",
+  ],
+  "crimson_hyphae": [
+    "/ingame-assets/block_pngs/crimson_hyphae.png",
+  ],
+  "crimson_stem": [
+    "/ingame-assets/block_pngs/crimson_stem.png",
+  ],
+  "cyan_banner": [
+    "/ingame-assets/block_pngs/cyan_banner.png",
+  ],
+  "gray_banner": [
+    "/ingame-assets/block_pngs/gray_banner.png",
+  ],
+  "green_banner": [
+    "/ingame-assets/block_pngs/green_banner.png",
+  ],
+  "light_blue_banner": [
+    "/ingame-assets/block_pngs/light_blue_banner.png",
+  ],
+  "light_gray_banner": [
+    "/ingame-assets/block_pngs/light_grey_banner.png",
+  ],
+  "lime_banner": [
+    "/ingame-assets/block_pngs/lime_banner.png",
+  ],
+  "magenta_banner": [
+    "/ingame-assets/block_pngs/magenta_banner.png",
+  ],
+  "orange_banner": [
+    "/ingame-assets/block_pngs/orange_banner.png",
+  ],
+  "pink_banner": [
+    "/ingame-assets/block_pngs/pink_banner.png",
+  ],
+  "prismarine": [
+    "/ingame-assets/block_pngs/prismarine.png",
+  ],
+  "prismarine_slab": [
+    "/ingame-assets/block_pngs/prismarine_slab.png",
+  ],
+  "prismarine_stairs": [
+    "/ingame-assets/block_pngs/prismarine_stairs.png",
+  ],
+  "prismarine_wall": [
+    "/ingame-assets/block_pngs/prismarine_wall.png",
+  ],
+  "purple_banner": [
+    "/ingame-assets/block_pngs/purple_banner.png",
+  ],
+  "red_banner": [
+    "/ingame-assets/block_pngs/red_banner.png",
+  ],
+  "sculk": [
+    "/ingame-assets/block_pngs/sculk.png",
+  ],
+  "sculk_sensor": [
+    "/ingame-assets/block_pngs/sculk_sensor.png",
+  ],
+  "sculk_shrieker": [
+    "/ingame-assets/block_pngs/skulk_shrieker.png",
+  ],
+  "sculk_vein": [
+    "/ingame-assets/block_pngs/skulk_vein.png",
+  ],
+  "stonecutter": [
+    "/ingame-assets/block_pngs/stonecutter.png",
+  ],
+  "white_banner": [
+    "/ingame-assets/block_pngs/white_banner.png",
+  ],
+  "yellow_banner": [
+    "/ingame-assets/block_pngs/yellow_banner.png",
   ],
 };
 
