@@ -177,7 +177,7 @@ export default function FileUpload({ onFileProcessed }) {
       <motion.div
         {...getRootProps()}
         className={`
-          border-2 border-dashed rounded-2xl p-8 cursor-pointer
+          border-2 border-dashed rounded-2xl p-8 cursor-pointer  min-h-[236px]
           transition-colors transition-opacity transition-transform duration-300 ease-out
           ${isDragActive && !isDragReject ? 'border-blue-400 bg-blue-400/10' : ''}
           ${isDragReject ? 'border-red-400 bg-red-400/10' : ''}
