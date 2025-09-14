@@ -83,7 +83,7 @@ export default function InventorySlot({ item, slotIndex }) {
       {/* Tooltip */}
       {item && isHovered && (
         <motion.div
-          className="absolute z-50 bg-black/95 text-white px-4 py-3 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none"
+          className="absolute z-50 bg-black/95 text-white px-2 py-1 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none"
           style={{
             left: slotIndex % 12 > 5 ? 'auto' : '100%',
             right: slotIndex % 12 > 5 ? '100%' : 'auto',
