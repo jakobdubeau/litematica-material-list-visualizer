@@ -247,7 +247,11 @@ export default function FileUpload({ onFileProcessed }) {
             animate={{ opacity: 1 }}
             className="text-red-400"
           >
-            <div className="text-4xl mb-4">❌</div>
+            <img 
+              src="/images/barrier_block.png" 
+              alt="Error" 
+              className="w-16 h-16 object-contain mx-auto mb-4"
+            />
             <p className="text-lg mb-4">{error}</p>
             <button
               onClick={() => {
