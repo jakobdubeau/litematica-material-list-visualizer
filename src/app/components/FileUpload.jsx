@@ -176,7 +176,7 @@ export default function FileUpload({ onFileProcessed }) {
       </motion.h2>
 
       <motion.div
-        {...(uploadState !== 'error' ? getRootProps() : {})}
+        {...(uploadState === 'idle' ? getRootProps() : {})}
         className={`
           border-2 border-dashed rounded-2xl p-8 min-h-[236px]
           ${uploadState === 'error' ? 'cursor-default' : 'cursor-pointer'}
