@@ -87,7 +87,7 @@ export default function MinecraftInventory({ materials, onReset }) {
           <div
             className="absolute inset-0 bg-no-repeat bg-center"
             style={{
-              backgroundImage: "url('/images/Gui_plastic_chest.png')",
+              backgroundImage: "url('/images/chest_gui.png')",
               backgroundSize: '100% 100%',
             }}
           />

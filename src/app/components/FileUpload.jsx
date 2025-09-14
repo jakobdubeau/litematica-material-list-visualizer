@@ -182,7 +182,7 @@ export default function FileUpload({ onFileProcessed }) {
           ${isDragActive && !isDragReject ? 'border-blue-400 bg-blue-400/10' : ''}
           ${isDragReject ? 'border-red-400 bg-red-400/10' : ''}
           ${uploadState === 'idle' ? 'border-gray-400 hover:border-gray-300' : ''}
-          ${uploadState === 'error' ? 'border-red-400' : ''}
+          ${uploadState === 'error' ? 'border-red-400 hover:border-red-500' : ''}
         `}
         initial={{ opacity: 0, transform: "translateY(20px)" }}
         animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -249,7 +249,7 @@ export default function FileUpload({ onFileProcessed }) {
             <p className="text-lg mb-4">{error}</p>
             <button
               onClick={() => setUploadState('idle')}
-              className="bg-red-600 hover:bg-red-700 text-white font-minecraft px-4 py-2 rounded-lg transition-colors"
+              className="bg-red-600 hover:bg-red-700 text-white font-minecraft px-4 py-2 rounded-lg transition-colors cursor-pointer"
             >
               Try Again
             </button>
