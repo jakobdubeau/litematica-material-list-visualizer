@@ -11,6 +11,7 @@ export default function FileUpload({ onFileProcessed }) {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [fileName, setFileName] = useState('');
+  const [isRetry, setIsRetry] = useState(false);
 
   const onDrop = useCallback(async (acceptedFiles, rejectedFiles) => {
     if (rejectedFiles.length > 0) {
@@ -175,14 +176,15 @@ export default function FileUpload({ onFileProcessed }) {
       </motion.h2>
 
       <motion.div
-        {...getRootProps()}
+        {...(uploadState !== 'error' ? getRootProps() : {})}
         className={`
-          border-2 border-dashed rounded-2xl p-8 cursor-pointer  min-h-[236px]
+          border-2 border-dashed rounded-2xl p-8 min-h-[236px]
+          ${uploadState === 'error' ? 'cursor-default' : 'cursor-pointer'}
           transition-colors transition-opacity transition-transform duration-300 ease-out
           ${isDragActive && !isDragReject ? 'border-blue-400 bg-blue-400/10' : ''}
-          ${isDragReject ? 'border-red-400 bg-red-400/10' : ''}
+          ${isDragActive && isDragReject ? 'border-red-400 bg-red-400/10' : ''}
+          ${uploadState === 'error' ? 'border-red-400 bg-red-400/10' : ''}
           ${uploadState === 'idle' ? 'border-gray-400 hover:border-gray-300' : ''}
-          ${uploadState === 'error' ? 'border-red-400 hover:border-red-500' : ''}
         `}
         initial={{ opacity: 0, transform: "translateY(20px)" }}
         animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -200,7 +202,7 @@ export default function FileUpload({ onFileProcessed }) {
               className="mb-4 flex justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
+              transition={{ duration: 0.5, delay: isRetry ? 0.1 : 1.4 }}
             >
               <img 
                 src="/images/enchanted_book.gif" 
@@ -212,7 +214,7 @@ export default function FileUpload({ onFileProcessed }) {
               className="text-gray-300 text-lg mb-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.6 }}
+              transition={{ duration: 0.5, delay: isRetry ? 0.2 : 1.6 }}
             >
               {isDragActive ? 'Drop your file here!' : 'Drag & drop your material list'}
             </motion.p>
@@ -220,7 +222,7 @@ export default function FileUpload({ onFileProcessed }) {
               className="text-gray-400 text-sm mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.8 }}
+              transition={{ duration: 0.5, delay: isRetry ? 0.3 : 1.8 }}
             >
               or click to browse
             </motion.p>
@@ -228,7 +230,7 @@ export default function FileUpload({ onFileProcessed }) {
               className="text-gray-500 text-xs"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 2.0 }}
+              transition={{ duration: 0.5, delay: isRetry ? 0.4 : 2.0 }}
             >
               Supports .txt files from Litematica
             </motion.p>
@@ -248,7 +250,10 @@ export default function FileUpload({ onFileProcessed }) {
             <div className="text-4xl mb-4">❌</div>
             <p className="text-lg mb-4">{error}</p>
             <button
-              onClick={() => setUploadState('idle')}
+              onClick={() => {
+                setUploadState('idle');
+                setIsRetry(true);
+              }}
               className="bg-red-600 hover:bg-red-700 text-white font-minecraft px-4 py-2 rounded-lg transition-colors cursor-pointer"
             >
               Try Again
