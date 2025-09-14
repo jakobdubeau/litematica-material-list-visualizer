@@ -2085,13 +2085,13 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/block_pngs/Lightning_Rod_(U)_JE3.png",
   ],
   "lilac": [
-    "/ingame-assets/block_pngs/Lilac_JE4_BE2.png",
+    "/ingame-assets/block_pngs/lilac.png",
   ],
   "lily_of_the_valley": [
     "/ingame-assets/block_pngs/48px-Lily_of_the_Valley_(texture)_JE1_BE1.png",
   ],
   "lily_pad": [
-    "/ingame-assets/block_pngs/Lily_Pad_JE2_BE2.png",
+    "/ingame-assets/block_pngs/lily_pad.png",
   ],
   "lime_bed": [
     "/ingame-assets/block_pngs/Lime_Bed.png",
@@ -3161,7 +3161,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/redstone_repeater.png",
   ],
   "redstone_torch": [
-    "/ingame-assets/block_pngs/Redstone_Torch_JE5.png",
+    "/ingame-assets/block_pngs/redstone_torch.png",
   ],
   "reinforced_deepslate": [
     "/ingame-assets/block_pngs/Reinforced_Deepslate_JE1.png",
@@ -3235,11 +3235,11 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "scute": [
     "/ingame-assets/item_pngs/scute.png",
   ],
+  "sea_lantern": [
+    "/ingame-assets/block_pngs/SeaLantern.png",
+  ],
   "sea_pickle": [
     "/ingame-assets/item_pngs/sea_pickle.png",
-  ],
-  "sea_pickle_1": [
-    "/ingame-assets/block_pngs/Sea_Pickle_1_JE1_BE1.png",
   ],
   "seagrass": [
     "/ingame-assets/item_pngs/seagrass.png",
@@ -3259,7 +3259,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/block_pngs/Short_Dry_Grass_JE1_BE1.png",
   ],
   "short_grass": [
-    "/ingame-assets/block_pngs/Short_Grass.png",
+    "/ingame-assets/block_pngs/short_grass.png",
   ],
   "shroomlight": [
     "/ingame-assets/block_pngs/Shroomlight_JE1_BE1.png",
@@ -3605,7 +3605,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/block_pngs/Tall_Dry_Grass_JE1_BE1.png",
   ],
   "tall_grass": [
-    "/ingame-assets/block_pngs/Tall_Grass.png",
+    "/ingame-assets/block_pngs/tall_grass.png",
   ],
   "target": [
     "/ingame-assets/block_pngs/Target_JE1_BE1.png",
@@ -3742,7 +3742,7 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/village_explorer_mapje_only.png",
   ],
   "vines": [
-    "/ingame-assets/block_pngs/Vines.png",
+    "/ingame-assets/block_pngs/vines.png",
   ],
   "wait": [
     "/ingame-assets/item_pngs/wait.png",

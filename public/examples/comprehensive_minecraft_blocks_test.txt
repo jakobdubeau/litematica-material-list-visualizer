@@ -1,0 +1,706 @@
+Material List - Comprehensive Minecraft Building Blocks Test
++------------------------------------------------+-------+-------+---------+
+| Item                                           | Total | Missing | Available |
++------------------------------------------------+-------+-------+---------+
+| Stone                                          | 2048  | 1024   | 1024    |
+| Granite                                        | 512   | 256    | 256     |
+| Polished Granite                               | 256   | 128    | 128     |
+| Diorite                                        | 512   | 256    | 256     |
+| Polished Diorite                               | 256   | 128    | 128     |
+| Andesite                                       | 512   | 256    | 256     |
+| Polished Andesite                              | 256   | 128    | 128     |
+| Deepslate                                      | 1024  | 512    | 512     |
+| Cobbled Deepslate                              | 512   | 256    | 256     |
+| Polished Deepslate                             | 256   | 128    | 128     |
+| Deepslate Bricks                               | 384   | 192    | 192     |
+| Deepslate Tiles                                | 256   | 128    | 128     |
+| Chiseled Deepslate                             | 64    | 32     | 32      |
+| Reinforced Deepslate                           | 16    | 8      | 8       |
+| Cobblestone                                    | 3072  | 1536   | 1536    |
+| Mossy Cobblestone                              | 256   | 128    | 128     |
+| Smooth Stone                                   | 512   | 256    | 256     |
+| Stone Bricks                                   | 1024  | 512    | 512     |
+| Mossy Stone Bricks                             | 256   | 128    | 128     |
+| Cracked Stone Bricks                           | 128   | 64     | 64      |
+| Chiseled Stone Bricks                          | 64    | 32     | 32      |
+| Packed Mud                                     | 512   | 256    | 256     |
+| Mud Bricks                                     | 384   | 192    | 192     |
+| Dirt                                           | 1280  | 640    | 640     |
+| Coarse Dirt                                    | 512   | 256    | 256     |
+| Podzol                                         | 256   | 128    | 128     |
+| Rooted Dirt                                    | 192   | 96     | 96      |
+| Grass Block                                    | 1024  | 512    | 512     |
+| Mycelium                                       | 128   | 64     | 64      |
+| Path                                           | 64    | 32     | 32      |
+| Sand                                           | 1536  | 768    | 768     |
+| Red Sand                                       | 512   | 256    | 256     |
+| Suspicious Sand                                | 32    | 16     | 16      |
+| Gravel                                         | 1024  | 512    | 512     |
+| Suspicious Gravel                              | 32    | 16     | 16      |
+| Clay                                           | 256   | 128    | 128     |
+| Terracotta                                     | 512   | 256    | 256     |
+| White Terracotta                               | 192   | 96     | 96      |
+| Orange Terracotta                              | 192   | 96     | 96      |
+| Magenta Terracotta                             | 192   | 96     | 96      |
+| Light Blue Terracotta                          | 192   | 96     | 96      |
+| Yellow Terracotta                              | 192   | 96     | 96      |
+| Lime Terracotta                                | 192   | 96     | 96      |
+| Pink Terracotta                                | 192   | 96     | 96      |
+| Gray Terracotta                                | 192   | 96     | 96      |
+| Light Gray Terracotta                          | 192   | 96     | 96      |
+| Cyan Terracotta                                | 192   | 96     | 96      |
+| Purple Terracotta                              | 192   | 96     | 96      |
+| Blue Terracotta                                | 192   | 96     | 96      |
+| Brown Terracotta                               | 192   | 96     | 96      |
+| Green Terracotta                               | 192   | 96     | 96      |
+| Red Terracotta                                 | 192   | 96     | 96      |
+| Black Terracotta                               | 192   | 96     | 96      |
+| White Glazed Terracotta                        | 64    | 32     | 32      |
+| Orange Glazed Terracotta                       | 64    | 32     | 32      |
+| Magenta Glazed Terracotta                      | 64    | 32     | 32      |
+| Light Blue Glazed Terracotta                   | 64    | 32     | 32      |
+| Yellow Glazed Terracotta                       | 64    | 32     | 32      |
+| Lime Glazed Terracotta                         | 64    | 32     | 32      |
+| Pink Glazed Terracotta                         | 64    | 32     | 32      |
+| Gray Glazed Terracotta                         | 64    | 32     | 32      |
+| Light Gray Glazed Terracotta                   | 64    | 32     | 32      |
+| Cyan Glazed Terracotta                         | 64    | 32     | 32      |
+| Purple Glazed Terracotta                       | 64    | 32     | 32      |
+| Blue Glazed Terracotta                         | 64    | 32     | 32      |
+| Brown Glazed Terracotta                        | 64    | 32     | 32      |
+| Green Glazed Terracotta                        | 64    | 32     | 32      |
+| Red Glazed Terracotta                          | 64    | 32     | 32      |
+| Black Glazed Terracotta                        | 64    | 32     | 32      |
+| White Concrete                                 | 256   | 128    | 128     |
+| Orange Concrete                                | 256   | 128    | 128     |
+| Magenta Concrete                               | 256   | 128    | 128     |
+| Light Blue Concrete                            | 256   | 128    | 128     |
+| Yellow Concrete                                | 256   | 128    | 128     |
+| Lime Concrete                                  | 256   | 128    | 128     |
+| Pink Concrete                                  | 256   | 128    | 128     |
+| Gray Concrete                                  | 256   | 128    | 128     |
+| Light Gray Concrete                            | 256   | 128    | 128     |
+| Cyan Concrete                                  | 256   | 128    | 128     |
+| Purple Concrete                                | 256   | 128    | 128     |
+| Blue Concrete                                  | 256   | 128    | 128     |
+| Brown Concrete                                 | 256   | 128    | 128     |
+| Green Concrete                                 | 256   | 128    | 128     |
+| Red Concrete                                   | 256   | 128    | 128     |
+| Black Concrete                                 | 256   | 128    | 128     |
+| White Concrete Powder                          | 128   | 64     | 64      |
+| Orange Concrete Powder                         | 128   | 64     | 64      |
+| Magenta Concrete Powder                        | 128   | 64     | 64      |
+| Light Blue Concrete Powder                     | 128   | 64     | 64      |
+| Yellow Concrete Powder                         | 128   | 64     | 64      |
+| Lime Concrete Powder                           | 128   | 64     | 64      |
+| Pink Concrete Powder                           | 128   | 64     | 64      |
+| Gray Concrete Powder                           | 128   | 64     | 64      |
+| Light Gray Concrete Powder                     | 128   | 64     | 64      |
+| Cyan Concrete Powder                           | 128   | 64     | 64      |
+| Purple Concrete Powder                         | 128   | 64     | 64      |
+| Blue Concrete Powder                           | 128   | 64     | 64      |
+| Brown Concrete Powder                          | 128   | 64     | 64      |
+| Green Concrete Powder                          | 128   | 64     | 64      |
+| Red Concrete Powder                            | 128   | 64     | 64      |
+| Black Concrete Powder                          | 128   | 64     | 64      |
+| Oak Log                                        | 512   | 256    | 256     |
+| Spruce Log                                     | 512   | 256    | 256     |
+| Birch Log                                      | 512   | 256    | 256     |
+| Jungle Log                                     | 512   | 256    | 256     |
+| Acacia Log                                     | 512   | 256    | 256     |
+| Dark Oak Log                                   | 512   | 256    | 256     |
+| Mangrove Log                                   | 512   | 256    | 256     |
+| Cherry Log                                     | 512   | 256    | 256     |
+| Bamboo Block                                   | 256   | 128    | 128     |
+| Crimson Stem                                   | 384   | 192    | 192     |
+| Warped Stem                                    | 384   | 192    | 192     |
+| Stripped Oak Log                               | 256   | 128    | 128     |
+| Stripped Spruce Log                            | 256   | 128    | 128     |
+| Stripped Birch Log                             | 256   | 128    | 128     |
+| Stripped Jungle Log                            | 256   | 128    | 128     |
+| Stripped Acacia Log                            | 256   | 128    | 128     |
+| Stripped Dark Oak Log                          | 256   | 128    | 128     |
+| Stripped Mangrove Log                          | 256   | 128    | 128     |
+| Stripped Cherry Log                            | 256   | 128    | 128     |
+| Stripped Bamboo Block                          | 128   | 64     | 64      |
+| Stripped Crimson Stem                          | 192   | 96     | 96      |
+| Stripped Warped Stem                           | 192   | 96     | 96      |
+| Oak Wood                                       | 256   | 128    | 128     |
+| Spruce Wood                                    | 256   | 128    | 128     |
+| Birch Wood                                     | 256   | 128    | 128     |
+| Jungle Wood                                    | 256   | 128    | 128     |
+| Acacia Wood                                    | 256   | 128    | 128     |
+| Dark Oak Wood                                  | 256   | 128    | 128     |
+| Mangrove Wood                                  | 256   | 128    | 128     |
+| Cherry Wood                                    | 256   | 128    | 128     |
+| Crimson Hyphae                                 | 192   | 96     | 96      |
+| Warped Hyphae                                  | 192   | 96     | 96      |
+| Stripped Oak Wood                              | 128   | 64     | 64      |
+| Stripped Spruce Wood                           | 128   | 64     | 64      |
+| Stripped Birch Wood                            | 128   | 64     | 64      |
+| Stripped Jungle Wood                           | 128   | 64     | 64      |
+| Stripped Acacia Wood                           | 128   | 64     | 64      |
+| Stripped Dark Oak Wood                         | 128   | 64     | 64      |
+| Stripped Mangrove Wood                         | 128   | 64     | 64      |
+| Stripped Cherry Wood                           | 128   | 64     | 64      |
+| Stripped Crimson Hyphae                        | 96    | 48     | 48      |
+| Stripped Warped Hyphae                         | 96    | 48     | 48      |
+| Oak Planks                                     | 1024  | 512    | 512     |
+| Spruce Planks                                  | 1024  | 512    | 512     |
+| Birch Planks                                   | 1024  | 512    | 512     |
+| Jungle Planks                                  | 1024  | 512    | 512     |
+| Acacia Planks                                  | 1024  | 512    | 512     |
+| Dark Oak Planks                                | 1024  | 512    | 512     |
+| Mangrove Planks                                | 512   | 256    | 256     |
+| Cherry Planks                                  | 512   | 256    | 256     |
+| Bamboo Planks                                  | 512   | 256    | 256     |
+| Crimson Planks                                 | 512   | 256    | 256     |
+| Warped Planks                                  | 512   | 256    | 256     |
+| Oak Stairs                                     | 256   | 128    | 128     |
+| Spruce Stairs                                  | 256   | 128    | 128     |
+| Birch Stairs                                   | 256   | 128    | 128     |
+| Jungle Stairs                                  | 256   | 128    | 128     |
+| Acacia Stairs                                  | 256   | 128    | 128     |
+| Dark Oak Stairs                                | 256   | 128    | 128     |
+| Mangrove Stairs                                | 192   | 96     | 96      |
+| Cherry Stairs                                  | 192   | 96     | 96      |
+| Bamboo Stairs                                  | 192   | 96     | 96      |
+| Crimson Stairs                                 | 192   | 96     | 96      |
+| Warped Stairs                                  | 192   | 96     | 96      |
+| Stone Stairs                                   | 256   | 128    | 128     |
+| Cobblestone Stairs                             | 384   | 192    | 192     |
+| Mossy Cobblestone Stairs                       | 128   | 64     | 64      |
+| Stone Brick Stairs                             | 256   | 128    | 128     |
+| Mossy Stone Brick Stairs                       | 128   | 64     | 64      |
+| Granite Stairs                                 | 128   | 64     | 64      |
+| Polished Granite Stairs                        | 96    | 48     | 48      |
+| Diorite Stairs                                 | 128   | 64     | 64      |
+| Polished Diorite Stairs                        | 96    | 48     | 48      |
+| Andesite Stairs                                | 128   | 64     | 64      |
+| Polished Andesite Stairs                       | 96    | 48     | 48      |
+| Deepslate Brick Stairs                         | 128   | 64     | 64      |
+| Deepslate Tile Stairs                          | 96    | 48     | 48      |
+| Cobbled Deepslate Stairs                       | 128   | 64     | 64      |
+| Polished Deepslate Stairs                      | 96    | 48     | 48      |
+| Brick Stairs                                   | 256   | 128    | 128     |
+| Mud Brick Stairs                               | 128   | 64     | 64      |
+| Sandstone Stairs                               | 256   | 128    | 128     |
+| Smooth Sandstone Stairs                        | 128   | 64     | 64      |
+| Red Sandstone Stairs                           | 192   | 96     | 96      |
+| Smooth Red Sandstone Stairs                    | 96    | 48     | 48      |
+| Prismarine Stairs                              | 128   | 64     | 64      |
+| Prismarine Brick Stairs                        | 96    | 48     | 48      |
+| Dark Prismarine Stairs                         | 96    | 48     | 48      |
+| Nether Brick Stairs                            | 256   | 128    | 128     |
+| Red Nether Brick Stairs                        | 128   | 64     | 64      |
+| Blackstone Stairs                              | 192   | 96     | 96      |
+| Polished Blackstone Stairs                     | 128   | 64     | 64      |
+| Polished Blackstone Brick Stairs               | 96    | 48     | 48      |
+| End Stone Brick Stairs                         | 128   | 64     | 64      |
+| Purpur Stairs                                  | 128   | 64     | 64      |
+| Quartz Stairs                                  | 192   | 96     | 96      |
+| Smooth Quartz Stairs                           | 96    | 48     | 48      |
+| Cut Copper Stairs                              | 64    | 32     | 32      |
+| Exposed Cut Copper Stairs                      | 64    | 32     | 32      |
+| Weathered Cut Copper Stairs                    | 64    | 32     | 32      |
+| Oxidized Cut Copper Stairs                     | 64    | 32     | 32      |
+| Waxed Cut Copper Stairs                        | 32    | 16     | 16      |
+| Waxed Exposed Cut Copper Stairs                | 32    | 16     | 16      |
+| Waxed Weathered Cut Copper Stairs              | 32    | 16     | 16      |
+| Waxed Oxidized Cut Copper Stairs               | 32    | 16     | 16      |
+| Oak Slab                                       | 192   | 96     | 96      |
+| Spruce Slab                                    | 192   | 96     | 96      |
+| Birch Slab                                     | 192   | 96     | 96      |
+| Jungle Slab                                    | 192   | 96     | 96      |
+| Acacia Slab                                    | 192   | 96     | 96      |
+| Dark Oak Slab                                  | 192   | 96     | 96      |
+| Mangrove Slab                                  | 128   | 64     | 64      |
+| Cherry Slab                                    | 128   | 64     | 64      |
+| Bamboo Slab                                    | 128   | 64     | 64      |
+| Crimson Slab                                   | 128   | 64     | 64      |
+| Warped Slab                                    | 128   | 64     | 64      |
+| Stone Slab                                     | 192   | 96     | 96      |
+| Smooth Stone Slab                              | 128   | 64     | 64      |
+| Cobblestone Slab                               | 256   | 128    | 128     |
+| Mossy Cobblestone Slab                         | 96    | 48     | 48      |
+| Stone Brick Slab                               | 192   | 96     | 96      |
+| Mossy Stone Brick Slab                         | 96    | 48     | 48      |
+| Granite Slab                                   | 96    | 48     | 48      |
+| Polished Granite Slab                          | 64    | 32     | 32      |
+| Diorite Slab                                   | 96    | 48     | 48      |
+| Polished Diorite Slab                          | 64    | 32     | 32      |
+| Andesite Slab                                  | 96    | 48     | 48      |
+| Polished Andesite Slab                         | 64    | 32     | 32      |
+| Deepslate Brick Slab                           | 96    | 48     | 48      |
+| Deepslate Tile Slab                            | 64    | 32     | 32      |
+| Cobbled Deepslate Slab                         | 96    | 48     | 48      |
+| Polished Deepslate Slab                        | 64    | 32     | 32      |
+| Brick Slab                                     | 192   | 96     | 96      |
+| Mud Brick Slab                                 | 96    | 48     | 48      |
+| Sandstone Slab                                 | 192   | 96     | 96      |
+| Smooth Sandstone Slab                          | 96    | 48     | 48      |
+| Cut Sandstone Slab                             | 128   | 64     | 64      |
+| Red Sandstone Slab                             | 128   | 64     | 64      |
+| Smooth Red Sandstone Slab                      | 64    | 32     | 32      |
+| Cut Red Sandstone Slab                         | 96    | 48     | 48      |
+| Prismarine Slab                                | 96    | 48     | 48      |
+| Prismarine Brick Slab                          | 64    | 32     | 32      |
+| Dark Prismarine Slab                           | 64    | 32     | 32      |
+| Nether Brick Slab                              | 192   | 96     | 96      |
+| Red Nether Brick Slab                          | 96    | 48     | 48      |
+| Blackstone Slab                                | 128   | 64     | 64      |
+| Polished Blackstone Slab                       | 96    | 48     | 48      |
+| Polished Blackstone Brick Slab                 | 64    | 32     | 32      |
+| End Stone Brick Slab                           | 96    | 48     | 48      |
+| Purpur Slab                                    | 96    | 48     | 48      |
+| Quartz Slab                                    | 128   | 64     | 64      |
+| Smooth Quartz Slab                             | 64    | 32     | 32      |
+| Cut Copper Slab                                | 48    | 24     | 24      |
+| Exposed Cut Copper Slab                        | 48    | 24     | 24      |
+| Weathered Cut Copper Slab                      | 48    | 24     | 24      |
+| Oxidized Cut Copper Slab                       | 48    | 24     | 24      |
+| Waxed Cut Copper Slab                          | 24    | 12     | 12      |
+| Waxed Exposed Cut Copper Slab                  | 24    | 12     | 12      |
+| Waxed Weathered Cut Copper Slab                | 24    | 12     | 12      |
+| Waxed Oxidized Cut Copper Slab                 | 24    | 12     | 12      |
+| Oak Fence                                      | 128   | 64     | 64      |
+| Spruce Fence                                   | 128   | 64     | 64      |
+| Birch Fence                                    | 128   | 64     | 64      |
+| Jungle Fence                                   | 128   | 64     | 64      |
+| Acacia Fence                                   | 128   | 64     | 64      |
+| Dark Oak Fence                                 | 128   | 64     | 64      |
+| Mangrove Fence                                 | 96    | 48     | 48      |
+| Cherry Fence                                   | 96    | 48     | 48      |
+| Bamboo Fence                                   | 96    | 48     | 48      |
+| Crimson Fence                                  | 96    | 48     | 48      |
+| Warped Fence                                   | 96    | 48     | 48      |
+| Nether Brick Fence                             | 128   | 64     | 64      |
+| Oak Fence Gate                                 | 16    | 8      | 8       |
+| Spruce Fence Gate                              | 16    | 8      | 8       |
+| Birch Fence Gate                               | 16    | 8      | 8       |
+| Jungle Fence Gate                              | 16    | 8      | 8       |
+| Acacia Fence Gate                              | 16    | 8      | 8       |
+| Dark Oak Fence Gate                            | 16    | 8      | 8       |
+| Mangrove Fence Gate                            | 12    | 6      | 6       |
+| Cherry Fence Gate                              | 12    | 6      | 6       |
+| Bamboo Fence Gate                              | 12    | 6      | 6       |
+| Crimson Fence Gate                             | 12    | 6      | 6       |
+| Warped Fence Gate                              | 12    | 6      | 6       |
+| Oak Door                                       | 24    | 12     | 12      |
+| Spruce Door                                    | 24    | 12     | 12      |
+| Birch Door                                     | 24    | 12     | 12      |
+| Jungle Door                                    | 24    | 12     | 12      |
+| Acacia Door                                    | 24    | 12     | 12      |
+| Dark Oak Door                                  | 24    | 12     | 12      |
+| Mangrove Door                                  | 18    | 9      | 9       |
+| Cherry Door                                    | 18    | 9      | 9       |
+| Bamboo Door                                    | 18    | 9      | 9       |
+| Crimson Door                                   | 18    | 9      | 9       |
+| Warped Door                                    | 18    | 9      | 9       |
+| Iron Door                                      | 8     | 4      | 4       |
+| Oak Trapdoor                                   | 32    | 16     | 16      |
+| Spruce Trapdoor                                | 32    | 16     | 16      |
+| Birch Trapdoor                                 | 32    | 16     | 16      |
+| Jungle Trapdoor                                | 32    | 16     | 16      |
+| Acacia Trapdoor                                | 32    | 16     | 16      |
+| Dark Oak Trapdoor                              | 32    | 16     | 16      |
+| Mangrove Trapdoor                              | 24    | 12     | 12      |
+| Cherry Trapdoor                                | 24    | 12     | 12      |
+| Bamboo Trapdoor                                | 24    | 12     | 12      |
+| Crimson Trapdoor                               | 24    | 12     | 12      |
+| Warped Trapdoor                                | 24    | 12     | 12      |
+| Iron Trapdoor                                  | 12    | 6      | 6       |
+| Glass                                          | 512   | 256    | 256     |
+| White Stained Glass                            | 128   | 64     | 64      |
+| Orange Stained Glass                           | 128   | 64     | 64      |
+| Magenta Stained Glass                          | 128   | 64     | 64      |
+| Light Blue Stained Glass                       | 128   | 64     | 64      |
+| Yellow Stained Glass                           | 128   | 64     | 64      |
+| Lime Stained Glass                             | 128   | 64     | 64      |
+| Pink Stained Glass                             | 128   | 64     | 64      |
+| Gray Stained Glass                             | 128   | 64     | 64      |
+| Light Gray Stained Glass                       | 128   | 64     | 64      |
+| Cyan Stained Glass                             | 128   | 64     | 64      |
+| Purple Stained Glass                           | 128   | 64     | 64      |
+| Blue Stained Glass                             | 128   | 64     | 64      |
+| Brown Stained Glass                            | 128   | 64     | 64      |
+| Green Stained Glass                            | 128   | 64     | 64      |
+| Red Stained Glass                              | 128   | 64     | 64      |
+| Black Stained Glass                            | 128   | 64     | 64      |
+| Glass Pane                                     | 96    | 48     | 48      |
+| White Stained Glass Pane                       | 48    | 24     | 24      |
+| Orange Stained Glass Pane                      | 48    | 24     | 24      |
+| Magenta Stained Glass Pane                     | 48    | 24     | 24      |
+| Light Blue Stained Glass Pane                  | 48    | 24     | 24      |
+| Yellow Stained Glass Pane                      | 48    | 24     | 24      |
+| Lime Stained Glass Pane                        | 48    | 24     | 24      |
+| Pink Stained Glass Pane                        | 48    | 24     | 24      |
+| Gray Stained Glass Pane                        | 48    | 24     | 24      |
+| Light Gray Stained Glass Pane                  | 48    | 24     | 24      |
+| Cyan Stained Glass Pane                        | 48    | 24     | 24      |
+| Purple Stained Glass Pane                      | 48    | 24     | 24      |
+| Blue Stained Glass Pane                        | 48    | 24     | 24      |
+| Brown Stained Glass Pane                       | 48    | 24     | 24      |
+| Green Stained Glass Pane                       | 48    | 24     | 24      |
+| Red Stained Glass Pane                         | 48    | 24     | 24      |
+| Black Stained Glass Pane                       | 48    | 24     | 24      |
+| Tinted Glass                                   | 64    | 32     | 32      |
+| White Wool                                     | 256   | 128    | 128     |
+| Orange Wool                                    | 256   | 128    | 128     |
+| Magenta Wool                                   | 256   | 128    | 128     |
+| Light Blue Wool                                | 256   | 128    | 128     |
+| Yellow Wool                                    | 256   | 128    | 128     |
+| Lime Wool                                      | 256   | 128    | 128     |
+| Pink Wool                                      | 256   | 128    | 128     |
+| Gray Wool                                      | 256   | 128    | 128     |
+| Light Gray Wool                                | 256   | 128    | 128     |
+| Cyan Wool                                      | 256   | 128    | 128     |
+| Purple Wool                                    | 256   | 128    | 128     |
+| Blue Wool                                      | 256   | 128    | 128     |
+| Brown Wool                                     | 256   | 128    | 128     |
+| Green Wool                                     | 256   | 128    | 128     |
+| Red Wool                                       | 256   | 128    | 128     |
+| Black Wool                                     | 256   | 128    | 128     |
+| White Carpet                                   | 64    | 32     | 32      |
+| Orange Carpet                                  | 64    | 32     | 32      |
+| Magenta Carpet                                 | 64    | 32     | 32      |
+| Light Blue Carpet                              | 64    | 32     | 32      |
+| Yellow Carpet                                  | 64    | 32     | 32      |
+| Lime Carpet                                    | 64    | 32     | 32      |
+| Pink Carpet                                    | 64    | 32     | 32      |
+| Gray Carpet                                    | 64    | 32     | 32      |
+| Light Gray Carpet                              | 64    | 32     | 32      |
+| Cyan Carpet                                    | 64    | 32     | 32      |
+| Purple Carpet                                  | 64    | 32     | 32      |
+| Blue Carpet                                    | 64    | 32     | 32      |
+| Brown Carpet                                   | 64    | 32     | 32      |
+| Green Carpet                                   | 64    | 32     | 32      |
+| Red Carpet                                     | 64    | 32     | 32      |
+| Black Carpet                                   | 64    | 32     | 32      |
+| Sandstone                                      | 512   | 256    | 256     |
+| Chiseled Sandstone                             | 64    | 32     | 32      |
+| Cut Sandstone                                  | 256   | 128    | 128     |
+| Smooth Sandstone                               | 256   | 128    | 128     |
+| Red Sandstone                                  | 384   | 192    | 192     |
+| Chiseled Red Sandstone                         | 48    | 24     | 24      |
+| Cut Red Sandstone                              | 192   | 96     | 96      |
+| Smooth Red Sandstone                           | 192   | 96     | 96      |
+| Bricks                                         | 512   | 256    | 256     |
+| Bookshelf                                      | 64    | 32     | 32      |
+| Chiseled Bookshelf                             | 32    | 16     | 16      |
+| Mossy Cobblestone Wall                         | 96    | 48     | 48      |
+| Cobblestone Wall                               | 128   | 64     | 64      |
+| Granite Wall                                   | 64    | 32     | 32      |
+| Diorite Wall                                   | 64    | 32     | 32      |
+| Andesite Wall                                  | 64    | 32     | 32      |
+| Stone Brick Wall                               | 96    | 48     | 48      |
+| Mossy Stone Brick Wall                         | 48    | 24     | 24      |
+| Sandstone Wall                                 | 96    | 48     | 48      |
+| Red Sandstone Wall                             | 64    | 32     | 32      |
+| Brick Wall                                     | 96    | 48     | 48      |
+| Prismarine Wall                                | 48    | 24     | 24      |
+| Nether Brick Wall                              | 96    | 48     | 48      |
+| Red Nether Brick Wall                          | 48    | 24     | 24      |
+| End Stone Brick Wall                           | 48    | 24     | 24      |
+| Blackstone Wall                                | 64    | 32     | 32      |
+| Polished Blackstone Wall                       | 48    | 24     | 24      |
+| Polished Blackstone Brick Wall                 | 32    | 16     | 16      |
+| Cobbled Deepslate Wall                         | 64    | 32     | 32      |
+| Polished Deepslate Wall                        | 48    | 24     | 24      |
+| Deepslate Brick Wall                           | 48    | 24     | 24      |
+| Deepslate Tile Wall                            | 32    | 16     | 16      |
+| Mud Brick Wall                                 | 48    | 24     | 24      |
+| Coal Ore                                       | 64    | 32     | 32      |
+| Deepslate Coal Ore                             | 48    | 24     | 24      |
+| Iron Ore                                       | 128   | 64     | 64      |
+| Deepslate Iron Ore                             | 96    | 48     | 48      |
+| Copper Ore                                     | 192   | 96     | 96      |
+| Deepslate Copper Ore                           | 128   | 64     | 64      |
+| Gold Ore                                       | 64    | 32     | 32      |
+| Deepslate Gold Ore                             | 48    | 24     | 24      |
+| Redstone Ore                                   | 96    | 48     | 48      |
+| Deepslate Redstone Ore                         | 64    | 32     | 32      |
+| Emerald Ore                                    | 32    | 16     | 16      |
+| Deepslate Emerald Ore                          | 24    | 12     | 12      |
+| Lapis Lazuli Ore                               | 48    | 24     | 24      |
+| Deepslate Lapis Lazuli Ore                     | 32    | 16     | 16      |
+| Diamond Ore                                    | 32    | 16     | 16      |
+| Deepslate Diamond Ore                          | 24    | 12     | 12      |
+| Nether Gold Ore                                | 96    | 48     | 48      |
+| Nether Quartz Ore                              | 128   | 64     | 64      |
+| Ancient Debris                                 | 12    | 6      | 6       |
+| Raw Iron Block                                 | 24    | 12     | 12      |
+| Raw Copper Block                               | 48    | 24     | 24      |
+| Raw Gold Block                                 | 12    | 6      | 6       |
+| Coal Block                                     | 32    | 16     | 16      |
+| Iron Block                                     | 64    | 32     | 32      |
+| Copper Block                                   | 96    | 48     | 48      |
+| Gold Block                                     | 48    | 24     | 24      |
+| Diamond Block                                  | 18    | 9      | 9       |
+| Emerald Block                                  | 12    | 6      | 6       |
+| Lapis Lazuli Block                             | 24    | 12     | 12      |
+| Redstone Block                                 | 32    | 16     | 16      |
+| Netherite Block                                | 6     | 3      | 3       |
+| Exposed Copper                                 | 64    | 32     | 32      |
+| Weathered Copper                               | 48    | 24     | 24      |
+| Oxidized Copper                                | 32    | 16     | 16      |
+| Cut Copper                                     | 64    | 32     | 32      |
+| Exposed Cut Copper                             | 48    | 24     | 24      |
+| Weathered Cut Copper                           | 32    | 16     | 16      |
+| Oxidized Cut Copper                            | 24    | 12     | 12      |
+| Waxed Copper Block                             | 32    | 16     | 16      |
+| Waxed Exposed Copper                           | 32    | 16     | 16      |
+| Waxed Weathered Copper                         | 24    | 12     | 12      |
+| Waxed Oxidized Copper                          | 16    | 8      | 8       |
+| Waxed Cut Copper                               | 32    | 16     | 16      |
+| Waxed Exposed Cut Copper                       | 24    | 12     | 12      |
+| Waxed Weathered Cut Copper                     | 16    | 8      | 8       |
+| Waxed Oxidized Cut Copper                      | 12    | 6      | 6       |
+| Oak Leaves                                     | 192   | 96     | 96      |
+| Spruce Leaves                                  | 192   | 96     | 96      |
+| Birch Leaves                                   | 192   | 96     | 96      |
+| Jungle Leaves                                  | 192   | 96     | 96      |
+| Acacia Leaves                                  | 192   | 96     | 96      |
+| Dark Oak Leaves                                | 192   | 96     | 96      |
+| Mangrove Leaves                                | 128   | 64     | 64      |
+| Cherry Leaves                                  | 128   | 64     | 64      |
+| Azalea Leaves                                  | 96    | 48     | 48      |
+| Flowering Azalea Leaves                        | 64    | 32     | 32      |
+| Sponge                                         | 32    | 16     | 16      |
+| Wet Sponge                                     | 16    | 8      | 8       |
+| Loom                                           | 8     | 4      | 4       |
+| White Banner                                   | 8     | 4      | 4       |
+| Orange Banner                                  | 8     | 4      | 4       |
+| Magenta Banner                                 | 8     | 4      | 4       |
+| Light Blue Banner                              | 8     | 4      | 4       |
+| Yellow Banner                                  | 8     | 4      | 4       |
+| Lime Banner                                    | 8     | 4      | 4       |
+| Pink Banner                                    | 8     | 4      | 4       |
+| Gray Banner                                    | 8     | 4      | 4       |
+| Light Gray Banner                              | 8     | 4      | 4       |
+| Cyan Banner                                    | 8     | 4      | 4       |
+| Purple Banner                                  | 8     | 4      | 4       |
+| Blue Banner                                    | 8     | 4      | 4       |
+| Brown Banner                                   | 8     | 4      | 4       |
+| Green Banner                                   | 8     | 4      | 4       |
+| Red Banner                                     | 8     | 4      | 4       |
+| Black Banner                                   | 8     | 4      | 4       |
+| Dispenser                                      | 12    | 6      | 6       |
+| Dropper                                        | 12    | 6      | 6       |
+| Note Block                                     | 16    | 8      | 8       |
+| Sticky Piston                                  | 8     | 4      | 4       |
+| Piston                                         | 12    | 6      | 6       |
+| TNT                                            | 32    | 16     | 16      |
+| Crafting Table                                 | 8     | 4      | 4       |
+| Furnace                                        | 16    | 8      | 8       |
+| Blast Furnace                                  | 12    | 6      | 6       |
+| Smoker                                         | 12    | 6      | 6       |
+| Ladder                                         | 48    | 24     | 24      |
+| Chest                                          | 16    | 8      | 8       |
+| Trapped Chest                                  | 8     | 4      | 4       |
+| Ender Chest                                    | 4     | 2      | 2       |
+| Jukebox                                        | 4     | 2      | 2       |
+| Lever                                          | 32    | 16     | 16      |
+| Stone Pressure Plate                           | 16    | 8      | 8       |
+| Heavy Weighted Pressure Plate                  | 8     | 4      | 4       |
+| Light Weighted Pressure Plate                 | 8     | 4      | 4       |
+| Oak Pressure Plate                             | 12    | 6      | 6       |
+| Spruce Pressure Plate                          | 12    | 6      | 6       |
+| Birch Pressure Plate                           | 12    | 6      | 6       |
+| Jungle Pressure Plate                          | 12    | 6      | 6       |
+| Acacia Pressure Plate                          | 12    | 6      | 6       |
+| Dark Oak Pressure Plate                        | 12    | 6      | 6       |
+| Mangrove Pressure Plate                        | 8     | 4      | 4       |
+| Cherry Pressure Plate                          | 8     | 4      | 4       |
+| Bamboo Pressure Plate                          | 8     | 4      | 4       |
+| Crimson Pressure Plate                         | 8     | 4      | 4       |
+| Warped Pressure Plate                          | 8     | 4      | 4       |
+| Polished Blackstone Pressure Plate             | 8     | 4      | 4       |
+| Stone Button                                   | 24    | 12     | 12      |
+| Oak Button                                     | 16    | 8      | 8       |
+| Spruce Button                                  | 16    | 8      | 8       |
+| Birch Button                                   | 16    | 8      | 8       |
+| Jungle Button                                  | 16    | 8      | 8       |
+| Acacia Button                                  | 16    | 8      | 8       |
+| Dark Oak Button                                | 16    | 8      | 8       |
+| Mangrove Button                                | 12    | 6      | 6       |
+| Cherry Button                                  | 12    | 6      | 6       |
+| Bamboo Button                                  | 12    | 6      | 6       |
+| Crimson Button                                 | 12    | 6      | 6       |
+| Warped Button                                  | 12    | 6      | 6       |
+| Polished Blackstone Button                     | 12    | 6      | 6       |
+| Snow Block                                     | 128   | 64     | 64      |
+| Ice                                            | 64    | 32     | 32      |
+| Packed Ice                                     | 32    | 16     | 16      |
+| Blue Ice                                       | 16    | 8      | 8       |
+| Cactus                                         | 32    | 16     | 16      |
+| Jukebox                                        | 4     | 2      | 2       |
+| Netherrack                                     | 512   | 256    | 256     |
+| Soul Sand                                      | 128   | 64     | 64      |
+| Soul Soil                                      | 96    | 48     | 48      |
+| Basalt                                         | 256   | 128    | 128     |
+| Polished Basalt                                | 128   | 64     | 64      |
+| Smooth Basalt                                  | 64    | 32     | 32      |
+| Blackstone                                     | 384   | 192    | 192     |
+| Polished Blackstone                            | 256   | 128    | 128     |
+| Chiseled Polished Blackstone                   | 32    | 16     | 16      |
+| Polished Blackstone Bricks                     | 192   | 96     | 96      |
+| Cracked Polished Blackstone Bricks             | 48    | 24     | 24      |
+| Gilded Blackstone                              | 64    | 32     | 32      |
+| Nether Bricks                                  | 512   | 256    | 256     |
+| Cracked Nether Bricks                          | 64    | 32     | 32      |
+| Chiseled Nether Bricks                         | 32    | 16     | 16      |
+| Red Nether Bricks                              | 256   | 128    | 128     |
+| Nether Wart Block                              | 64    | 32     | 32      |
+| Warped Wart Block                              | 48    | 24     | 24      |
+| Shroomlight                                    | 32    | 16     | 16      |
+| Crimson Nylium                                 | 64    | 32     | 32      |
+| Warped Nylium                                  | 64    | 32     | 32      |
+| Crying Obsidian                                | 32    | 16     | 16      |
+| Respawn Anchor                                 | 4     | 2      | 2       |
+| Lodestone                                      | 2     | 1      | 1       |
+| Glowstone                                      | 96    | 48     | 48      |
+| Jack o'Lantern                                 | 16    | 8      | 8       |
+| Sea Lantern                                    | 32    | 16     | 16      |
+| Lantern                                        | 24    | 12     | 12      |
+| Soul Lantern                                   | 16    | 8      | 8       |
+| End Stone                                      | 256   | 128    | 128     |
+| End Stone Bricks                               | 192   | 96     | 96      |
+| Purpur Block                                   | 192   | 96     | 96      |
+| Purpur Pillar                                  | 96    | 48     | 48      |
+| Chorus Plant                                   | 16    | 8      | 8       |
+| Chorus Flower                                  | 8     | 4      | 4       |
+| Dragon Egg                                     | 1     | 1      | 0       |
+| Shulker Box                                    | 4     | 2      | 2       |
+| White Shulker Box                              | 3     | 2      | 1       |
+| Orange Shulker Box                             | 3     | 2      | 1       |
+| Magenta Shulker Box                            | 3     | 2      | 1       |
+| Light Blue Shulker Box                         | 3     | 2      | 1       |
+| Yellow Shulker Box                             | 3     | 2      | 1       |
+| Lime Shulker Box                               | 3     | 2      | 1       |
+| Pink Shulker Box                               | 3     | 2      | 1       |
+| Gray Shulker Box                               | 3     | 2      | 1       |
+| Light Gray Shulker Box                         | 3     | 2      | 1       |
+| Cyan Shulker Box                               | 3     | 2      | 1       |
+| Purple Shulker Box                             | 3     | 2      | 1       |
+| Blue Shulker Box                               | 3     | 2      | 1       |
+| Brown Shulker Box                              | 3     | 2      | 1       |
+| Green Shulker Box                              | 3     | 2      | 1       |
+| Red Shulker Box                                | 3     | 2      | 1       |
+| Black Shulker Box                              | 3     | 2      | 1       |
+| Prismarine                                     | 192   | 96     | 96      |
+| Prismarine Bricks                              | 128   | 64     | 64      |
+| Dark Prismarine                                | 96    | 48     | 48      |
+| Magma Block                                    | 64    | 32     | 32      |
+| Observer                                       | 12    | 6      | 6       |
+| Target                                         | 8     | 4      | 4       |
+| Redstone Lamp                                  | 16    | 8      | 8       |
+| Beacon                                         | 2     | 1      | 1       |
+| Conduit                                        | 2     | 1      | 1       |
+| Daylight Detector                              | 8     | 4      | 4       |
+| Hopper                                         | 8     | 4      | 4       |
+| Composter                                      | 12    | 6      | 6       |
+| Barrel                                         | 12    | 6      | 6       |
+| Smoker                                         | 8     | 4      | 4       |
+| Blast Furnace                                  | 8     | 4      | 4       |
+| Cartography Table                              | 4     | 2      | 2       |
+| Fletching Table                                | 4     | 2      | 2       |
+| Grindstone                                     | 4     | 2      | 2       |
+| Lectern                                        | 6     | 3      | 3       |
+| Smithing Table                                 | 4     | 2      | 2       |
+| Stonecutter                                    | 4     | 2      | 2       |
+| Bell                                           | 4     | 2      | 2       |
+| Anvil                                          | 2     | 1      | 1       |
+| Chipped Anvil                                  | 1     | 1      | 0       |
+| Damaged Anvil                                  | 1     | 1      | 0       |
+| Enchanting Table                               | 2     | 1      | 1       |
+| End Portal Frame                               | 12    | 6      | 6       |
+| Brewing Stand                                  | 4     | 2      | 2       |
+| Cauldron                                       | 8     | 4      | 4       |
+| Flower Pot                                     | 24    | 12     | 12      |
+| Skeleton Skull                                 | 2     | 1      | 1       |
+| Wither Skeleton Skull                          | 1     | 1      | 0       |
+| Player Head                                    | 1     | 1      | 0       |
+| Zombie Head                                    | 2     | 1      | 1       |
+| Creeper Head                                   | 1     | 1      | 0       |
+| Dragon Head                                    | 1     | 1      | 0       |
+| Piglin Head                                    | 1     | 1      | 0       |
+| Cake                                           | 8     | 4      | 4       |
+| Quartz Block                                   | 384   | 192    | 192     |
+| Chiseled Quartz Block                          | 48    | 24     | 24      |
+| Quartz Pillar                                  | 192   | 96     | 96      |
+| Smooth Quartz Block                            | 192   | 96     | 96      |
+| Quartz Bricks                                  | 96    | 48     | 48      |
+| Honey Block                                    | 32    | 16     | 16      |
+| Honeycomb Block                                | 24    | 12     | 12      |
+| Slime Block                                    | 16    | 8      | 8       |
+| Bone Block                                     | 64    | 32     | 32      |
+| Hay Bale                                       | 96    | 48     | 48      |
+| Dried Kelp Block                               | 32    | 16     | 16      |
+| Bamboo                                         | 128   | 64     | 64      |
+| Scaffolding                                    | 64    | 32     | 32      |
+| Lightning Rod                                  | 8     | 4      | 4       |
+| Pointed Dripstone                              | 32    | 16     | 16      |
+| Dripstone Block                                | 64    | 32     | 32      |
+| Rooted Dirt                                    | 96    | 48     | 48      |
+| Moss Block                                     | 64    | 32     | 32      |
+| Moss Carpet                                    | 32    | 16     | 16      |
+| Azalea                                         | 12    | 6      | 6       |
+| Flowering Azalea                               | 8     | 4      | 4       |
+| Big Dripleaf                                   | 16    | 8      | 8       |
+| Small Dripleaf                                 | 24    | 12     | 12      |
+| Spore Blossom                                  | 4     | 2      | 2       |
+| Glow Lichen                                    | 32    | 16     | 16      |
+| Amethyst Block                                 | 32    | 16     | 16      |
+| Budding Amethyst                               | 8     | 4      | 4       |
+| Amethyst Cluster                               | 12    | 6      | 6       |
+| Large Amethyst Bud                             | 16    | 8      | 8       |
+| Medium Amethyst Bud                            | 20    | 10     | 10      |
+| Small Amethyst Bud                             | 24    | 12     | 12      |
+| Tuff                                           | 192   | 96     | 96      |
+| Calcite                                        | 96    | 48     | 48      |
+| Powder Snow                                    | 16    | 8      | 8       |
+| Sculk                                          | 32    | 16     | 16      |
+| Sculk Vein                                     | 48    | 24     | 24      |
+| Sculk Catalyst                                 | 4     | 2      | 2       |
+| Sculk Shrieker                                 | 2     | 1      | 1       |
+| Sculk Sensor                                   | 6     | 3      | 3       |
+| Calibrated Sculk Sensor                        | 3     | 2      | 1       |
+| Ochre Froglight                                | 8     | 4      | 4       |
+| Verdant Froglight                              | 8     | 4      | 4       |
+| Pearlescent Froglight                          | 8     | 4      | 4       |
+| Frogspawn                                      | 16    | 8      | 8       |
+| Mangrove Roots                                 | 32    | 16     | 16      |
+| Muddy Mangrove Roots                           | 24    | 12     | 12      |
+| Chiseled Tuff                                  | 24    | 12     | 12      |
+| Polished Tuff                                  | 48    | 24     | 24      |
+| Tuff Bricks                                    | 32    | 16     | 16      |
+| Chiseled Tuff Bricks                           | 16    | 8      | 8       |
+| Chiseled Copper                                | 16    | 8      | 8       |
+| Exposed Chiseled Copper                        | 12    | 6      | 6       |
+| Weathered Chiseled Copper                      | 8     | 4      | 4       |
+| Oxidized Chiseled Copper                       | 6     | 3      | 3       |
+| Waxed Chiseled Copper                          | 8     | 4      | 4       |
+| Waxed Exposed Chiseled Copper                  | 6     | 3      | 3       |
+| Waxed Weathered Chiseled Copper                | 4     | 2      | 2       |
+| Waxed Oxidized Chiseled Copper                 | 3     | 2      | 1       |
+| Copper Grate                                   | 16    | 8      | 8       |
+| Exposed Copper Grate                           | 12    | 6      | 6       |
+| Weathered Copper Grate                         | 8     | 4      | 4       |
+| Oxidized Copper Grate                          | 6     | 3      | 3       |
+| Waxed Copper Grate                             | 8     | 4      | 4       |
+| Waxed Exposed Copper Grate                     | 6     | 3      | 3       |
+| Waxed Weathered Copper Grate                   | 4     | 2      | 2       |
+| Waxed Oxidized Copper Grate                    | 3     | 2      | 1       |
+| Copper Bulb                                    | 12    | 6      | 6       |
+| Exposed Copper Bulb                            | 9     | 5      | 4       |
+| Weathered Copper Bulb                          | 6     | 3      | 3       |
+| Oxidized Copper Bulb                           | 4     | 2      | 2       |
+| Waxed Copper Bulb                              | 6     | 3      | 3       |
+| Waxed Exposed Copper Bulb                      | 5     | 3      | 2       |
+| Waxed Weathered Copper Bulb                    | 3     | 2      | 1       |
+| Waxed Oxidized Copper Bulb                     | 2     | 1      | 1       |
+| Trial Spawner                                  | 1     | 1      | 0       |
+| Vault                                          | 1     | 1      | 0       |
+| Heavy Core                                     | 1     | 1      | 0       |
++------------------------------------------------+-------+-------+---------+
