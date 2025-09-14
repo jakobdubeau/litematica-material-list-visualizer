@@ -203,7 +203,7 @@ export default function FileUpload({ onFileProcessed }) {
               transition={{ duration: 0.5, delay: 1.4 }}
             >
               <img 
-                src="/images/Enchanted_Book.gif" 
+                src="/images/enchanted_book.gif" 
                 alt="Upload file" 
                 className="w-16 h-16 object-contain"
               />
