@@ -27,10 +27,6 @@ export default function InventorySlot({ item, slotIndex }) {
                 src={item.texture}
                 alt={item.displayName}
                 className="w-[50px] h-[50px] object-contain absolute inset-0 m-auto"
-                style={{
-                  imageRendering: 'auto',
-                  filter: 'none'
-                }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
@@ -55,17 +51,11 @@ export default function InventorySlot({ item, slotIndex }) {
       {/* Tooltip */}
       {item && isHovered && (
         <motion.div
-          className="absolute z-50 bg-black/95 text-white px-2 py-1 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none"
-          style={{
-            left: slotIndex % 12 > 5 ? 'auto' : '100%',
-            right: slotIndex % 12 > 5 ? '100%' : 'auto',
-            bottom: slotIndex >= 60 ? '100%' : 'auto',
-            top: slotIndex >= 60 ? 'auto' : '100%',
-            marginLeft: slotIndex % 12 > 5 ? '-8px' : '8px',
-            marginRight: slotIndex % 12 > 5 ? '8px' : '-8px',
-            marginTop: slotIndex >= 60 ? '-8px' : '8px',
-            marginBottom: slotIndex >= 60 ? '8px' : '-8px',
-          }}
+          className={`absolute z-50 bg-black/95 text-white px-2 py-1 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none ${
+            slotIndex % 12 > 5 ? 'right-full -mr-11.5' : 'left-full ml-2'
+          } ${
+            slotIndex >= 60 ? 'bottom-full mb-2' : 'top-full mt-2'
+          }`}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.15 }}

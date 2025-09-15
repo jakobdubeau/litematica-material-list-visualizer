@@ -7,7 +7,6 @@ import MinecraftLoader from './MinecraftLoader';
 import { processInventoryItems, splitIntoPages } from '../utils/minecraftAssets';
 
 export default function MinecraftInventory({ materials, onReset }) {
-  const [processedItems, setProcessedItems] = useState([]);
   const [inventoryPages, setInventoryPages] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,8 +18,7 @@ export default function MinecraftInventory({ materials, onReset }) {
         // Process materials into inventory items
         const items = processInventoryItems(materials);
         const pages = splitIntoPages(items, 72); // 72 slots for double chest (12x6)
-        
-        setProcessedItems(items);
+
         setInventoryPages(pages);
         setCurrentPage(0);
       } catch (error) {

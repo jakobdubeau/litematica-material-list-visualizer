@@ -36,9 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-.minecraft-font {
-  font-family: var(--font-minecraft);
-}
 
 .bg-minecraft-scene {
   background-size: cover;
@@ -82,6 +79,3 @@ body {
   image-rendering: crisp-edges;
 }
 
-.bg-gradient-radial {
-  background-image: radial-gradient(circle, var(--tw-gradient-stops));
-}
