@@ -4113,12 +4113,3 @@ export function getAssetPath(minecraftName) {
   return paths ? paths[0] : null; // Return first available path
 }
 
-// Get all asset paths for a minecraft item name  
-export function getAllAssetPaths(minecraftName) {
-  return UNIVERSAL_ASSET_MAPPING[minecraftName] || [];
-}
-
-// Check if an item has assets
-export function hasAssets(minecraftName) {
-  return minecraftName in UNIVERSAL_ASSET_MAPPING;
-}

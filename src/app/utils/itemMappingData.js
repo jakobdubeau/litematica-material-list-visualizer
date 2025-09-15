@@ -1,12 +1,5 @@
 'use client';
 
-import itemsTexturesData from './items_textures.json';
-
-// Create a mapping from item names to their texture data
-const ITEMS_TEXTURE_MAP = new Map();
-itemsTexturesData.forEach(item => {
-  ITEMS_TEXTURE_MAP.set(item.name, item);
-});
 
 // Display name mappings for common Litematica item names
 const LITEMATICA_DISPLAY_NAME_MAPPINGS = {
@@ -306,35 +299,3 @@ export function getDisplayName(minecraftName) {
     .join(' ');
 }
 
-/**
- * Check if we have texture data for a given minecraft name
- */
-export function hasTextureData(minecraftName) {
-  const cleanName = minecraftName.replace('minecraft:', '').toLowerCase();
-  return ITEMS_TEXTURE_MAP.has(cleanName);
-}
-
-/**
- * Get texture data for a minecraft item
- */
-export function getTextureData(minecraftName) {
-  const cleanName = minecraftName.replace('minecraft:', '').toLowerCase();
-  return ITEMS_TEXTURE_MAP.get(cleanName);
-}
-
-/**
- * Get all available item names from the texture data
- */
-export function getAllItemNames() {
-  return Array.from(ITEMS_TEXTURE_MAP.keys());
-}
-
-/**
- * Search for item names that match a pattern
- */
-export function searchItemNames(query) {
-  const lowercaseQuery = query.toLowerCase();
-  return Array.from(ITEMS_TEXTURE_MAP.keys())
-    .filter(name => name.includes(lowercaseQuery))
-    .sort();
-}
