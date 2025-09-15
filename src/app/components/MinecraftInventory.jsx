@@ -147,7 +147,7 @@ export default function MinecraftInventory({ materials, onReset }) {
       >
         <motion.button
           onClick={onReset}
-          className="bg-black text-gray-300 hover:text-white font-minecraft px-8 py-3 text-lg rounded-full transition-all duration-300 cursor-pointer hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8),0_0_20px_rgba(255,255,255,0.4)] focus:outline-none"
+          className="bg-black text-gray-300 hover:text-white font-minecraft px-7 py-3 text-lg rounded-full transition-all duration-300 cursor-pointer hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8),0_0_20px_rgba(255,255,255,0.4)] focus:outline-none"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
