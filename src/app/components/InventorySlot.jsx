@@ -5,34 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function InventorySlot({ item, slotIndex }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [fallbackIndex, setFallbackIndex] = useState(0);
-  const [currentImageUrl, setCurrentImageUrl] = useState(item?.texture);
 
-  // Get the current image URL to display
-  const getImageUrl = () => {
-    if (!item || !item.texturePaths) return currentImageUrl || item?.texture;
-    
-    // If we have fallback paths, use the current fallback index
-    if (fallbackIndex < item.texturePaths.length) {
-      return item.texturePaths[fallbackIndex];
-    }
-    
-    return currentImageUrl || item?.texture;
-  };
-
-  const handleImageError = () => {
-    if (!item || !item.texturePaths) {
-      return; // No fallbacks available, will show placeholder
-    }
-    
-    // Try the next fallback image
-    const nextIndex = fallbackIndex + 1;
-    if (nextIndex < item.texturePaths.length) {
-      setCurrentImageUrl(item.texturePaths[nextIndex]);
-      setFallbackIndex(nextIndex);
-    }
-    // If we've exhausted all fallbacks, the image will hide itself
-  };
 
   return (
     <div className="relative">
@@ -49,22 +22,21 @@ export default function InventorySlot({ item, slotIndex }) {
         {item && (
           <>
             {/* Item texture */}
-            {getImageUrl() ? (
+            {item.texture ? (
               <motion.img
-                src={getImageUrl()}
+                src={item.texture}
                 alt={item.displayName}
                 className="w-[50px] h-[50px] object-contain absolute inset-0 m-auto"
-                style={{ 
+                style={{
                   imageRendering: 'auto',
                   filter: 'none'
                 }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
-                onError={handleImageError}
               />
             ) : (
-              // Fallback placeholder for items without textures
+              // Placeholder for items without textures
               <div className="w-full h-full bg-gray-600 border border-gray-500 flex items-center justify-center text-xs text-gray-300">
                 {item.name.charAt(0).toUpperCase()}
               </div>
