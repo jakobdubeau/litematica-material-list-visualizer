@@ -385,6 +385,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "block_of_resin": [
     "/ingame-assets/block_pngs/Block_of_Resin_JE1_BE1.png",
   ],
+  "resin_block": [
+    "/ingame-assets/block_pngs/Block_of_Resin_JE1_BE1.png",
+  ],
   "block_of_stripped_bamboo": [
     "/ingame-assets/block_pngs/Block_of_Stripped_Bamboo_JE3_BE2.png",
   ],
@@ -647,6 +650,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/block_pngs/Carved_Pumpkin_(N)_JE5.png",
     "/ingame-assets/block_pngs/Carved_Pumpkin_(S)_JE5.png",
   ],
+  "pumpkin": [
+    "/ingame-assets/block_pngs/Carved_Pumpkin_(N)_JE5.png",
+  ],
   "cat": [
     "/ingame-assets/item_pngs/cat.png",
   ],
@@ -795,6 +801,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/clay_ball.png",
   ],
   "closed_eyeblossom": [
+    "/ingame-assets/block_pngs/Closed_Eyeblossom_JE1_BE1.png",
+  ],
+  "eyeblossom": [
     "/ingame-assets/block_pngs/Closed_Eyeblossom_JE1_BE1.png",
   ],
   "coal": [
@@ -2280,6 +2289,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
   "monster_spawner": [
     "/ingame-assets/block_pngs/Monster_Spawner_JE4.png",
   ],
+  "spawner": [
+    "/ingame-assets/block_pngs/Monster_Spawner_JE4.png",
+  ],
   "moss_block": [
     "/ingame-assets/block_pngs/Moss_Block_JE1_BE1.png",
   ],
@@ -3027,8 +3039,8 @@ export const UNIVERSAL_ASSET_MAPPING = {
     "/ingame-assets/item_pngs/rabbit_foot.png",
     "/ingame-assets/item_pngs/rabbits_foot.png",
   ],
-  "rail_": [
-    "/ingame-assets/block_pngs/Rail_%28texture%29_JE3_BE2.webp",
+  "rail": [
+    "/ingame-assets/block_pngs/rail.png",
   ],
   "raiser_armor_trim": [
     "/ingame-assets/item_pngs/raiser_armor_trim.png",
@@ -3306,6 +3318,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
   ],
   "smooth_quartz_stairs": [
     "/ingame-assets/block_pngs/Smooth_Quartz_Stairs_(N)_JE2_BE1.png",
+  ],
+  "smooth_quartz": [
+    "/ingame-assets/block_pngs/Smooth_Quartz_Block_JE3_BE2.png",
   ],
   "smooth_red_sandstone": [
     "/ingame-assets/block_pngs/Smooth_Red_Sandstone_JE4_BE2.png",
@@ -3731,6 +3746,9 @@ export const UNIVERSAL_ASSET_MAPPING = {
   ],
   "vault": [
     "/ingame-assets/block_pngs/Vault_JE6_BE5.png",
+  ],
+  "ominous_vault": [
+    "/ingame-assets/block_pngs/ominous_vault.png",
   ],
   "verdant_froglight": [
     "/ingame-assets/block_pngs/Verdant_Froglight_(UD)_JE1.png",
