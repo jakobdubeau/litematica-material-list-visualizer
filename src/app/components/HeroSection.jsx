@@ -21,13 +21,13 @@ export default function HeroSection() {
   const handleReset = () => {
     // Phase 1: Fade out inventory (0.2s)
     setShowInventory(false);
-    
+
     // Phase 2: After inventory fades, shrink card and slide title back (0.35s)
     setTimeout(() => {
       setShowMaterials(false);
       setHideTitle(false);
       setRemoveTitle(false);
-      
+
       // Phase 3: Reset to initial state after animations complete
       setTimeout(() => {
         setMaterialList([]);
@@ -55,11 +55,9 @@ export default function HeroSection() {
         {!removeTitle && (
           <div className="flex-none pt-12 pb-8 px-4 text-center">
             <motion.div
-              animate={{ 
-                y: hideTitle ? -200 : 0, 
-                opacity: hideTitle ? 0 : 1,
-                scale: hideTitle ? 0.95 : 1,
-                filter: hideTitle ? 'blur(2px)' : 'blur(0px)'
+              animate={{
+                y: hideTitle ? -200 : 0,
+                opacity: hideTitle ? 0 : 1
               }}
               transition={{ 
                 duration: 0.4, 
@@ -117,22 +115,23 @@ export default function HeroSection() {
         <div className="flex-none mx-4 mb-8">
           <motion.div 
             className="modern-card rounded-3xl p-8 md:p-12 max-w-4xl mx-auto flex flex-col justify-center"
-            style={{ 
+            style={{
               position: 'relative',
-              transformOrigin: 'bottom'
+              transformOrigin: 'bottom',
+              overflow: 'hidden'
             }}
             initial={{ opacity: 0, y: 100 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               y: 0,
-              minHeight: showMaterials ? '700px' : '400px',
+              height: showMaterials ? '700px' : '400px',
               marginTop: showMaterials ? '-300px' : '0px'
             }}
-            transition={{ 
+            transition={{
               opacity: { duration: 1, delay: 0.5, ease: "easeOut" },
               y: { duration: 1, delay: 0.5, ease: "easeOut" },
-              minHeight: { duration: 0.7, delay: 0, ease: [0.16, 1, 0.3, 1] },
-              marginTop: { duration: 0.7, delay: 0, ease: [0.16, 1, 0.3, 1] }
+              height: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+              marginTop: { duration: 0.7, ease: [0.16, 1, 0.3, 1] }
             }}
             onAnimationComplete={() => {
               if (showMaterials && !showInventory) {
