@@ -89,6 +89,169 @@ export function getItemTexture(itemName) {
 // Re-export display name functions
 export { getDisplayName, getMinecraftName };
 
+// Material categories for organizing inventory
+const ITEM_CATEGORIES = {
+  WOOD: 'wood',
+  STONE: 'stone',
+  DECORATION: 'decoration',
+  FUNCTIONAL: 'functional',
+  ORES_METALS: 'ores_metals',
+  REDSTONE: 'redstone',
+  NATURE: 'nature',
+  NETHER: 'nether',
+  TOOLS_WEAPONS: 'tools_weapons',
+  OTHER: 'other'
+};
+
+// Category priority order (lower number = higher priority)
+const CATEGORY_ORDER = {
+  [ITEM_CATEGORIES.WOOD]: 1,
+  [ITEM_CATEGORIES.STONE]: 2,
+  [ITEM_CATEGORIES.DECORATION]: 3,
+  [ITEM_CATEGORIES.FUNCTIONAL]: 4,
+  [ITEM_CATEGORIES.ORES_METALS]: 5,
+  [ITEM_CATEGORIES.REDSTONE]: 6,
+  [ITEM_CATEGORIES.NATURE]: 7,
+  [ITEM_CATEGORIES.NETHER]: 8,
+  [ITEM_CATEGORIES.TOOLS_WEAPONS]: 9,
+  [ITEM_CATEGORIES.OTHER]: 10
+};
+
+/**
+ * Get the category for a given Minecraft item
+ * @param {string} itemName - The Minecraft item name (with or without 'minecraft:' prefix)
+ * @returns {string} The category name
+ */
+export function getItemCategory(itemName) {
+  const cleanName = itemName.replace('minecraft:', '').toLowerCase();
+
+  // Wood category
+  if (cleanName.includes('wood') || cleanName.includes('planks') ||
+      cleanName.includes('log') || cleanName.includes('stem') ||
+      ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry', 'bamboo', 'crimson', 'warped'].some(wood => cleanName.includes(wood)) ||
+      cleanName.includes('fence') || cleanName.includes('gate') ||
+      (cleanName.includes('door') && !cleanName.includes('iron') && !cleanName.includes('copper')) ||
+      (cleanName.includes('trapdoor') && !cleanName.includes('iron') && !cleanName.includes('copper')) ||
+      cleanName.includes('stick') || cleanName.includes('boat') || cleanName.includes('chest') ||
+      cleanName.includes('barrel') || cleanName.includes('lectern') || cleanName.includes('bookshelf') ||
+      cleanName.includes('crafting_table') || cleanName.includes('workbench')) {
+    return ITEM_CATEGORIES.WOOD;
+  }
+
+  // Stone category
+  if (cleanName.includes('stone') || cleanName.includes('cobblestone') ||
+      cleanName.includes('granite') || cleanName.includes('diorite') || cleanName.includes('andesite') ||
+      cleanName.includes('deepslate') || cleanName.includes('blackstone') ||
+      cleanName.includes('sandstone') || cleanName.includes('sand') ||
+      cleanName.includes('gravel') || cleanName.includes('flint') ||
+      cleanName.includes('brick') && !cleanName.includes('nether') ||
+      cleanName.includes('cobbled') || cleanName.includes('smooth') ||
+      cleanName.includes('chiseled') || cleanName.includes('polished') ||
+      cleanName.includes('cut') && (cleanName.includes('sandstone') || cleanName.includes('stone'))) {
+    return ITEM_CATEGORIES.STONE;
+  }
+
+  // Ores & Metals category
+  if (['iron', 'gold', 'diamond', 'emerald', 'copper', 'netherite', 'coal', 'lapis', 'redstone_ore'].some(ore => cleanName.includes(ore)) ||
+      cleanName.includes('raw_') || cleanName.includes('_ore') ||
+      cleanName.includes('block_of_') || cleanName.includes('_block') &&
+      ['iron', 'gold', 'diamond', 'emerald', 'copper', 'netherite', 'coal', 'lapis', 'redstone'].some(metal => cleanName.includes(metal))) {
+    return ITEM_CATEGORIES.ORES_METALS;
+  }
+
+  // Redstone category
+  if (cleanName.includes('redstone') || cleanName.includes('repeater') ||
+      cleanName.includes('comparator') || cleanName.includes('piston') ||
+      cleanName.includes('observer') || cleanName.includes('hopper') ||
+      cleanName.includes('dropper') || cleanName.includes('dispenser') ||
+      cleanName.includes('rail') || cleanName.includes('lever') ||
+      cleanName.includes('button') || cleanName.includes('pressure_plate') ||
+      cleanName.includes('tripwire') || cleanName.includes('daylight_detector') ||
+      cleanName.includes('target') || cleanName.includes('lightning_rod')) {
+    return ITEM_CATEGORIES.REDSTONE;
+  }
+
+  // Decoration category
+  if (cleanName.includes('wool') || cleanName.includes('carpet') ||
+      cleanName.includes('concrete') || cleanName.includes('terracotta') ||
+      cleanName.includes('glass') || cleanName.includes('stained') ||
+      cleanName.includes('banner') || cleanName.includes('painting') ||
+      cleanName.includes('item_frame') || cleanName.includes('flower_pot') ||
+      cleanName.includes('candle') || cleanName.includes('lantern') ||
+      cleanName.includes('torch') || cleanName.includes('sea_lantern') ||
+      cleanName.includes('glowstone') || cleanName.includes('prismarine') ||
+      cleanName.includes('quartz') || cleanName.includes('purpur') ||
+      cleanName.includes('end_stone') || cleanName.includes('shulker')) {
+    return ITEM_CATEGORIES.DECORATION;
+  }
+
+  // Functional category
+  if (cleanName.includes('furnace') || cleanName.includes('anvil') ||
+      cleanName.includes('enchanting_table') || cleanName.includes('brewing_stand') ||
+      cleanName.includes('cauldron') || cleanName.includes('beacon') ||
+      cleanName.includes('bed') || cleanName.includes('bell') ||
+      cleanName.includes('composter') || cleanName.includes('grindstone') ||
+      cleanName.includes('loom') || cleanName.includes('smithing_table') ||
+      cleanName.includes('stonecutter') || cleanName.includes('cartography_table') ||
+      cleanName.includes('fletching_table') || cleanName.includes('ladder') ||
+      cleanName.includes('scaffolding') || cleanName.includes('chain') ||
+      (cleanName.includes('door') && (cleanName.includes('iron') || cleanName.includes('copper'))) ||
+      (cleanName.includes('trapdoor') && (cleanName.includes('iron') || cleanName.includes('copper')))) {
+    return ITEM_CATEGORIES.FUNCTIONAL;
+  }
+
+  // Nature category
+  if (cleanName.includes('dirt') || cleanName.includes('grass') ||
+      cleanName.includes('leaves') || cleanName.includes('sapling') ||
+      cleanName.includes('flower') || cleanName.includes('mushroom') ||
+      cleanName.includes('vine') || cleanName.includes('lily') ||
+      cleanName.includes('cactus') || cleanName.includes('sugar_cane') ||
+      cleanName.includes('kelp') || cleanName.includes('seagrass') ||
+      cleanName.includes('coral') || cleanName.includes('sponge') ||
+      cleanName.includes('ice') || cleanName.includes('snow') ||
+      cleanName.includes('pumpkin') || cleanName.includes('melon') ||
+      cleanName.includes('wheat') || cleanName.includes('carrot') ||
+      cleanName.includes('potato') || cleanName.includes('beetroot') ||
+      cleanName.includes('seeds') || cleanName.includes('bone_meal') ||
+      cleanName.includes('water') || cleanName.includes('lava') ||
+      cleanName.includes('obsidian') || cleanName.includes('clay') ||
+      cleanName.includes('path') || cleanName.includes('farmland') ||
+      cleanName.includes('moss') || cleanName.includes('azalea') ||
+      cleanName.includes('rooted_dirt') || cleanName.includes('hanging_roots')) {
+    return ITEM_CATEGORIES.NATURE;
+  }
+
+  // Nether category
+  if (cleanName.includes('nether') || cleanName.includes('soul') ||
+      cleanName.includes('magma') || cleanName.includes('blaze') ||
+      cleanName.includes('wither') || cleanName.includes('ghast') ||
+      cleanName.includes('piglin') || cleanName.includes('hoglin') ||
+      cleanName.includes('basalt') || cleanName.includes('crying_obsidian') ||
+      cleanName.includes('respawn_anchor') || cleanName.includes('lodestone') ||
+      cleanName.includes('ancient_debris') || cleanName.includes('netherrack') ||
+      cleanName.includes('warped') || cleanName.includes('crimson') ||
+      cleanName.includes('shroomlight') || cleanName.includes('nylium')) {
+    return ITEM_CATEGORIES.NETHER;
+  }
+
+  // Tools & Weapons category
+  if (TOOLS_AND_ARMOR.includes(cleanName) ||
+      cleanName.includes('sword') || cleanName.includes('pickaxe') ||
+      cleanName.includes('axe') || cleanName.includes('shovel') ||
+      cleanName.includes('hoe') || cleanName.includes('bow') ||
+      cleanName.includes('crossbow') || cleanName.includes('trident') ||
+      cleanName.includes('helmet') || cleanName.includes('chestplate') ||
+      cleanName.includes('leggings') || cleanName.includes('boots') ||
+      cleanName.includes('shield') || cleanName.includes('elytra') ||
+      cleanName.includes('totem') || cleanName.includes('arrow') ||
+      cleanName.includes('potion') || cleanName.includes('enchanted_book')) {
+    return ITEM_CATEGORIES.TOOLS_WEAPONS;
+  }
+
+  // Default to OTHER category
+  return ITEM_CATEGORIES.OTHER;
+}
+
 /**
  * Process materials list and split items into proper stacks for inventory display
  * @param {Array} materials - Array of material objects with name, total/missing, and optional displayName
@@ -136,22 +299,42 @@ export function processInventoryItems(materials) {
     }
   });
   
-  // Group identical items together and sort by name
+  // Group identical items together and sort by category, then quantity, then name
   const groupedItems = {};
   processedItems.forEach(item => {
     const key = item.name;
     if (!groupedItems[key]) {
-      groupedItems[key] = [];
+      groupedItems[key] = {
+        items: [],
+        category: getItemCategory(item.name),
+        totalQuantity: 0,
+        displayName: item.displayName
+      };
     }
-    groupedItems[key].push(item);
+    groupedItems[key].items.push(item);
+    groupedItems[key].totalQuantity += item.count;
   });
-  
-  // Flatten back to array with identical items adjacent
+
+  // Sort by category first, then by total quantity (descending), then by name
   const result = [];
   Object.keys(groupedItems)
-    .sort()
+    .sort((a, b) => {
+      const groupA = groupedItems[a];
+      const groupB = groupedItems[b];
+
+      // First sort by category priority
+      const categoryDiff = CATEGORY_ORDER[groupA.category] - CATEGORY_ORDER[groupB.category];
+      if (categoryDiff !== 0) return categoryDiff;
+
+      // Then sort by total quantity (descending)
+      const quantityDiff = groupB.totalQuantity - groupA.totalQuantity;
+      if (quantityDiff !== 0) return quantityDiff;
+
+      // Finally sort by display name alphabetically
+      return groupA.displayName.localeCompare(groupB.displayName);
+    })
     .forEach(itemName => {
-      result.push(...groupedItems[itemName]);
+      result.push(...groupedItems[itemName].items);
     });
   
   return result;
