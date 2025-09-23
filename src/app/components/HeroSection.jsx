@@ -125,7 +125,7 @@ export default function HeroSection() {
               opacity: 1,
               y: 0,
               height: showMaterials ? '700px' : '400px',
-              marginTop: showMaterials ? '-300px' : '0px'
+              marginTop: showMaterials ? '-150px' : '0px'
             }}
             transition={{
               opacity: { duration: 1, delay: 0.5, ease: "easeOut" },
