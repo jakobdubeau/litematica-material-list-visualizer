@@ -134,7 +134,7 @@ export default function MinecraftInventory({ materials, onReset }) {
 
       {/* Back to Upload Button */}
       <motion.div
-        className="text-center mt-8"
+        className="text-center mt-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
