@@ -52,7 +52,7 @@ export default function InventorySlot({ item, slotIndex }) {
       {item && isHovered && (
         <motion.div
           className={`absolute z-50 bg-black/95 text-white px-2 py-1 rounded-md text-base font-minecraft whitespace-nowrap pointer-events-none ${
-            slotIndex % 12 > 5 ? 'right-full -mr-11.5' : 'left-full ml-2'
+            slotIndex % 12 > 5 ? 'right-full -mr-11.5' : 'left-full -ml-11.5'
           } ${
             slotIndex >= 60 ? 'bottom-full mb-2' : 'top-full mt-2'
           }`}

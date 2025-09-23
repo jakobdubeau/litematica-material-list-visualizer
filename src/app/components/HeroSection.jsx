@@ -37,7 +37,7 @@ export default function HeroSection() {
 
 
   return (
-    <div className="h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background Image with Blur Effect */}
       <div 
         className="absolute inset-0 bg-minecraft-scene bg-blur"
@@ -50,7 +50,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 gradient-fade-to-dark" />
       
       {/* Main Content */}
-      <div className="relative z-10 h-screen flex flex-col overflow-hidden">
+      <div className="relative z-10 min-h-screen flex flex-col">
         {/* Title Section */}
         {!removeTitle && (
           <div className="flex-none pt-12 pb-8 px-4 text-center">

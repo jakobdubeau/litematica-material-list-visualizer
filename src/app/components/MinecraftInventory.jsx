@@ -65,7 +65,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
             className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ left: 'calc(50% - min(26.87rem, 46.5vw))' }}
+            style={{ left: 'calc(50% - min(27rem, 45.5vw))' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
@@ -122,7 +122,7 @@ export default function MinecraftInventory({ materials, onReset }) {
             onClick={() => setCurrentPage(Math.min(inventoryPages.length - 1, currentPage + 1))}
             disabled={currentPage === inventoryPages.length - 1}
             className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ right: 'calc(50% - min(26.87rem, 47vw))' }}
+            style={{ right: 'calc(50% - min(27rem, 45.5vw))' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
