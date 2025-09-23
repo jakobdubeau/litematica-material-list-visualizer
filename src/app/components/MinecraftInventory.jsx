@@ -87,13 +87,13 @@ export default function MinecraftInventory({ materials, onReset }) {
           {/* Inventory Grid for this page - properly aligned with chest GUI */}
           <motion.div
             key={currentPage}
-            className="absolute grid grid-cols-12 gap-x-[10.1%] gap-y-[3.6%]"
+            className="absolute grid grid-cols-12 grid-rows-6 gap-3"
             style={{
-              top: '10.777%',
-              left: '2.311%',
-              width: '80%',
-              height: '73.177%',
-              padding: '1.281%',
+              top: '11%',
+              left: '2.4%',
+              width: '95%',
+              height: '79.5%',
+              padding: '1.3%',
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -10,7 +10,7 @@ export default function InventorySlot({ item, slotIndex }) {
   return (
     <div className="relative">
       <motion.div
-        className="w-[52px] h-[52px] relative cursor-pointer"
+        className="w-full h-full relative cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         whileHover={{ scale: 1.05 }}
@@ -26,7 +26,7 @@ export default function InventorySlot({ item, slotIndex }) {
               <motion.img
                 src={item.texture}
                 alt={item.displayName}
-                className="w-full h-full object-contain absolute inset-0 m-auto"
+                className="w-full h-full object-contain absolute inset-0 m-auto "
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
