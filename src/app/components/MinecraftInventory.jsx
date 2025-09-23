@@ -64,8 +64,8 @@ export default function MinecraftInventory({ materials, onReset }) {
           <motion.button
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
-            className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ left: 'calc(50% - 430px)' }}
+            className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
+            style={{ left: 'calc(50% - min(26.87rem, 46.5vw))' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
@@ -74,13 +74,7 @@ export default function MinecraftInventory({ materials, onReset }) {
           </motion.button>
         )}
 
-        <div
-          className="relative"
-          style={{ 
-            width: '780px', 
-            height: '492px'
-          }}
-        >
+        <div className="relative w-full max-w-[780px] aspect-[780/492]">
           {/* Chest Background Image for this page - scaled to fit */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center"
@@ -93,13 +87,13 @@ export default function MinecraftInventory({ materials, onReset }) {
           {/* Inventory Grid for this page - properly aligned with chest GUI */}
           <motion.div
             key={currentPage}
-            className="absolute grid grid-cols-12 gap-x-[61px] gap-y-[12px]"
+            className="absolute grid grid-cols-12 gap-x-[10.1%] gap-y-[3.6%]"
             style={{
-              top: '53px',
-              left: '18px',
-              width: '624px',
-              height: '360px',
-              padding: '10px',
+              top: '10.777%',
+              left: '2.311%',
+              width: '80%',
+              height: '73.177%',
+              padding: '1.281%',
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -127,8 +121,8 @@ export default function MinecraftInventory({ materials, onReset }) {
           <motion.button
             onClick={() => setCurrentPage(Math.min(inventoryPages.length - 1, currentPage + 1))}
             disabled={currentPage === inventoryPages.length - 1}
-            className="font-minecraft text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ right: 'calc(50% - 430px)' }}
+            className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
+            style={{ right: 'calc(50% - min(26.87rem, 47vw))' }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2 }}
@@ -147,7 +141,7 @@ export default function MinecraftInventory({ materials, onReset }) {
       >
         <motion.button
           onClick={onReset}
-          className="bg-black text-gray-300 hover:text-white font-minecraft px-7 py-3 text-lg rounded-full transition-all duration-300 cursor-pointer hover:[text-shadow:0_0_10px_rgba(255,255,255,0.8),0_0_20px_rgba(255,255,255,0.4)] focus:outline-none"
+          className="bg-black text-gray-300 hover:text-white font-minecraft px-7 py-3 text-lg rounded-full transition-all duration-300 cursor-pointer hover:[text-shadow:0_0_0.625rem_rgba(255,255,255,0.8),0_0_1.25rem_rgba(255,255,255,0.4)] focus:outline-none"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
