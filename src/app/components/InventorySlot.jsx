@@ -26,7 +26,7 @@ export default function InventorySlot({ item, slotIndex }) {
               <motion.img
                 src={item.texture}
                 alt={item.displayName}
-                className="w-[50px] h-[50px] object-contain absolute inset-0 m-auto"
+                className="w-full h-full object-contain absolute inset-0 m-auto"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2 }}
@@ -40,7 +40,7 @@ export default function InventorySlot({ item, slotIndex }) {
             
             {/* Stack count - only show if more than 1 */}
             {item.count > 1 && (
-              <div className="absolute -bottom-1 -right-1 bg-black/80 text-white text-sm font-minecraft px-1.5 rounded min-w-[20px] text-center leading-tight">
+              <div className="absolute -bottom-1 -right-1 bg-black/80 text-white text-sm font-minecraft px-1.5 rounded min-w-5 text-center leading-tight">
                 {item.count}
               </div>
             )}
