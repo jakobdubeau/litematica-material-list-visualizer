@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <img alt="logo" src="public/favicon.ico" width="100" />
+</div>
+<h1 align="center">
+    Litematica Material List Visualizer
+</h1>
+<p align="center">
+    LMLV is a simple web app that turns your Litematica material list text files into a clean, organized layout for planning your builds. Instead of taking tons of screenshots or constantly pausing your game, you can see everything you need in one easy-to-read place.   <br><br>Check it out at <a href="placeholder" target="_blank">placeholder.com</a>.
+</p>
 
-## Getting Started
+## Preview
 
-First, run the development server:
+<div align="center">
+    <img alt="site" src="public/images/mcsite.png" width="1000" style="border-radius: 10px;" />
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Steps
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Upload**: Drop your .txt material list into the box or click to browse for it
+2. **Processing**: The app automatically reads and organizes all your materials
+3. **View**: Instantly see your full material list in a clean, easy-to-read layout
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
