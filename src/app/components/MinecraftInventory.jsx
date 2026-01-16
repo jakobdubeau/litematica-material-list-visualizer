@@ -6,6 +6,23 @@ import InventorySlot from './InventorySlot';
 import MinecraftLoader from './MinecraftLoader';
 import { processInventoryItems, splitIntoPages } from '../utils/minecraftAssets';
 
+function PaginationButton({ direction, onClick, disabled }) {
+  const isPrev = direction === 'prev';
+  return (
+    <motion.button
+      onClick={onClick}
+      disabled={disabled}
+      className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute top-1/2 transform -translate-y-1/2 z-10"
+      style={{ [isPrev ? 'left' : 'right']: 'calc(50% - min(27rem, 45.5vw))' }}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.2 }}
+    >
+      {isPrev ? '<' : '>'}
+    </motion.button>
+  );
+}
+
 export default function MinecraftInventory({ materials, onReset }) {
   const [inventoryPages, setInventoryPages] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -15,14 +32,13 @@ export default function MinecraftInventory({ materials, onReset }) {
     const processItems = async () => {
       setIsLoading(true);
       try {
-        // Process materials into inventory items
         const items = processInventoryItems(materials);
-        const pages = splitIntoPages(items, 72); // 72 slots for double chest (12x6)
-
+        const pages = splitIntoPages(items, 72);
         setInventoryPages(pages);
         setCurrentPage(0);
       } catch (error) {
-        // Error processing inventory items - fail silently for production
+        console.error('Failed to process inventory:', error);
+        setInventoryPages([[...Array(72).fill(null)]]);
       } finally {
         setIsLoading(false);
       }
@@ -33,18 +49,16 @@ export default function MinecraftInventory({ materials, onReset }) {
     }
   }, [materials]);
 
-
   if (isLoading) {
     return <MinecraftLoader />;
   }
 
   const currentPageItems = inventoryPages[currentPage] || [];
+  const hasMultiplePages = inventoryPages.length > 1;
 
   return (
-    <div className="w-full"
-    >
-      {/* Page indicator for multi-page inventories - Centered */}
-      {inventoryPages.length > 1 && (
+    <div className="w-full">
+      {hasMultiplePages && (
         <motion.div
           className="flex justify-center mb-4 text-white font-minecraft"
           initial={{ opacity: 0 }}
@@ -57,25 +71,16 @@ export default function MinecraftInventory({ materials, onReset }) {
         </motion.div>
       )}
 
-      {/* Centered Chest Container with Arrows */}
       <div className="flex items-center justify-center w-full relative">
-        {/* Left Arrow - Previous Page */}
-        {inventoryPages.length > 1 && (
-          <motion.button
+        {hasMultiplePages && (
+          <PaginationButton
+            direction="prev"
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
-            className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ left: 'calc(50% - min(27rem, 45.5vw))' }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-          >
-            &#60;
-          </motion.button>
+          />
         )}
 
         <div className="relative w-full max-w-[780px] aspect-[780/492]">
-          {/* Chest Background Image for this page - scaled to fit */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center"
             style={{
@@ -84,7 +89,6 @@ export default function MinecraftInventory({ materials, onReset }) {
             }}
           />
 
-          {/* Inventory Grid for this page - properly aligned with chest GUI */}
           <motion.div
             key={currentPage}
             className="absolute grid grid-cols-12 grid-rows-6 gap-3"
@@ -104,7 +108,6 @@ export default function MinecraftInventory({ materials, onReset }) {
             ))}
           </motion.div>
 
-          {/* Subtle glow effect for active chest */}
           <motion.div
             className="absolute inset-0 pointer-events-none rounded-lg"
             style={{
@@ -116,23 +119,15 @@ export default function MinecraftInventory({ materials, onReset }) {
           />
         </div>
 
-        {/* Right Arrow - Next Page */}
-        {inventoryPages.length > 1 && (
-          <motion.button
+        {hasMultiplePages && (
+          <PaginationButton
+            direction="next"
             onClick={() => setCurrentPage(Math.min(inventoryPages.length - 1, currentPage + 1))}
             disabled={currentPage === inventoryPages.length - 1}
-            className="font-minecraft text-3xl sm:text-4xl md:text-5xl text-gray-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed select-none cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
-            style={{ right: 'calc(50% - min(27rem, 45.5vw))' }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-          >
-            &#62;
-          </motion.button>
+          />
         )}
       </div>
 
-      {/* Back to Upload Button */}
       <motion.div
         className="text-center mt-6"
         initial={{ opacity: 0 }}

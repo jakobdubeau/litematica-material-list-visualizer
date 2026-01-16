@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export default function MinecraftLoader() {
   return (
     <div className="flex flex-col items-center justify-center py-14">
-      {/* Loading text */}
       <motion.div
         className="text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -24,8 +23,7 @@ export default function MinecraftLoader() {
         >
           Processing Materials
         </motion.h3>
-        
-        {/* Animated dots */}
+
         <div className="flex justify-center space-x-1">
           {[0, 1, 2].map((i) => (
             <motion.div

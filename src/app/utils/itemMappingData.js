@@ -263,10 +263,6 @@ Object.entries(LITEMATICA_DISPLAY_NAME_MAPPINGS).forEach(([displayName, minecraf
   MINECRAFT_TO_DISPLAY_NAME[minecraftName] = displayName;
 });
 
-/**
- * Convert Litematica display name to internal minecraft name
- * e.g. "Dark Oak Planks" → "dark_oak_planks"
- */
 export function getMinecraftName(litematicaName) {
   // Check direct mapping first
   if (LITEMATICA_DISPLAY_NAME_MAPPINGS[litematicaName]) {
@@ -280,10 +276,6 @@ export function getMinecraftName(litematicaName) {
     .replace(/^_+|_+$/g, '');
 }
 
-/**
- * Convert minecraft name to display name
- * e.g. "dark_oak_planks" → "Dark Oak Planks"
- */
 export function getDisplayName(minecraftName) {
   const cleanName = minecraftName.replace('minecraft:', '').toLowerCase();
   
