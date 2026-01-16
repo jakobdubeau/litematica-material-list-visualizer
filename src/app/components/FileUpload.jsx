@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
 import MinecraftLoader from './MinecraftLoader';
-import { getMinecraftName } from '../utils/itemMappingData';
+import { parseTxtFile, parseJsonFile } from '../utils/fileParser';
 
 export default function FileUpload({ onFileProcessed }) {
   const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, error
@@ -71,86 +71,6 @@ export default function FileUpload({ onFileProcessed }) {
         });
       }, 50);
     });
-  };
-
-  const parseTxtFile = (text) => {
-    const lines = text.split('\n');
-    const materials = [];
-    
-    for (const line of lines) {
-      // Skip header and separator lines
-      if (line.includes('+') || line.includes('Material List') || line.includes('Item') || line.trim() === '') {
-        continue;
-      }
-      
-      // Parse table rows: | Item Name | Total | Missing | Available |
-      const match = line.match(/\|\s*([^|]+?)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|/);
-      if (match) {
-        const [, displayName, total, missing, available] = match;
-        const cleanDisplayName = displayName.trim();
-        const minecraftName = getMinecraftName(cleanDisplayName);
-        
-        materials.push({
-          name: minecraftName, // Use minecraft internal name
-          displayName: cleanDisplayName, // Keep original display name
-          total: parseInt(total),
-          missing: parseInt(missing),
-          available: parseInt(available),
-          type: 'crafted'
-        });
-      }
-    }
-    
-    if (materials.length === 0) {
-      throw new Error('No valid materials found in TXT file');
-    }
-    
-    return materials;
-  };
-
-  const parseJsonFile = (text) => {
-    try {
-      const data = JSON.parse(text);
-      const materials = [];
-      
-      for (const item of data) {
-        // Add raw materials
-        if (item.RawItem && item.TotalEstimate) {
-          const minecraftName = item.RawItem.replace('minecraft:', '');
-          materials.push({
-            name: minecraftName,
-            displayName: null, // Will be generated from minecraft name
-            total: item.TotalEstimate,
-            missing: item.TotalEstimate,
-            available: 0,
-            type: 'raw'
-          });
-        }
-        
-        // Add result items (crafted items)
-        if (item.Results) {
-          for (const result of item.Results) {
-            const minecraftName = result.ResultItem.replace('minecraft:', '');
-            materials.push({
-              name: minecraftName,
-              displayName: null, // Will be generated from minecraft name
-              total: result.ResultTotal,
-              missing: result.ResultTotal,
-              available: 0,
-              type: 'crafted'
-            });
-          }
-        }
-      }
-      
-      if (materials.length === 0) {
-        throw new Error('No valid materials found in JSON file');
-      }
-      
-      return materials;
-    } catch (err) {
-      throw new Error('Invalid JSON file format');
-    }
   };
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({
