@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import FileUpload from './FileUpload';
-import MinecraftInventory from './MinecraftInventory';
+import FileUpload from '@/components/features/FileUpload';
+import InventoryGrid from '@/components/features/Inventory/InventoryGrid';
 
 export default function HeroSection() {
   const [phase, setPhase] = useState('initial');
@@ -142,7 +142,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 onAnimationComplete={handleInventoryFadeComplete}
               >
-                <MinecraftInventory materials={materialList} onReset={handleReset} />
+                <InventoryGrid materials={materialList} onReset={handleReset} />
               </motion.div>
             ) : (
               <FileUpload onFileProcessed={handleFileProcessed} />

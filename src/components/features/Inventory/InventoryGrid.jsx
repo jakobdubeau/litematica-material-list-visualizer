@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import InventorySlot from './InventorySlot';
-import MinecraftLoader from './MinecraftLoader';
-import { processInventoryItems, splitIntoPages } from '../utils/minecraftAssets';
+import InventorySlot from '@/components/features/Inventory/InventorySlot';
+import Loader from '@/components/ui/Loader';
+import { processInventoryItems, splitIntoPages } from '@/lib/inventory';
 
 function PaginationButton({ direction, onClick, disabled }) {
   const isPrev = direction === 'prev';
@@ -50,7 +50,7 @@ export default function MinecraftInventory({ materials, onReset }) {
   }, [materials]);
 
   if (isLoading) {
-    return <MinecraftLoader />;
+    return <Loader />;
   }
 
   const currentPageItems = inventoryPages[currentPage] || [];

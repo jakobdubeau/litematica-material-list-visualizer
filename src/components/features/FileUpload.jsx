@@ -3,13 +3,14 @@
 import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
-import MinecraftLoader from './MinecraftLoader';
-import { parseTxtFile, parseJsonFile } from '../utils/fileParser';
+import Loader from '@/components/ui/Loader';
+import { parseTxtFile, parseJsonFile } from '@/lib/parsing';
 
 export default function FileUpload({ onFileProcessed }) {
-  const [uploadState, setUploadState] = useState('idle'); // idle, uploading, processing, error
+  const [uploadState, setUploadState] = useState('idle');
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
+  const [errorDetails, setErrorDetails] = useState(null);
   const [fileName, setFileName] = useState('');
   const [isRetry, setIsRetry] = useState(false);
 
@@ -54,6 +55,10 @@ export default function FileUpload({ onFileProcessed }) {
       
     } catch (err) {
       setError(err.message || 'Failed to process file');
+      setErrorDetails({
+        line: err.line || null,
+        content: err.content || null
+      });
       setUploadState('error');
     }
   }, [onFileProcessed]);
@@ -158,7 +163,7 @@ export default function FileUpload({ onFileProcessed }) {
         )}
 
         {(uploadState === 'uploading' || uploadState === 'processing') && (
-          <MinecraftLoader />
+          <Loader />
         )}
 
         {uploadState === 'error' && (
@@ -167,15 +172,23 @@ export default function FileUpload({ onFileProcessed }) {
             animate={{ opacity: 1 }}
             className="text-red-400"
           >
-            <img 
-              src="/images/barrier_block.png" 
-              alt="Error" 
+            <img
+              src="/images/barrier_block.png"
+              alt="Error"
               className="w-16 h-16 object-contain mx-auto mb-4"
             />
-            <p className="text-lg mb-4">{error}</p>
+            <p className="text-lg mb-2">{error}</p>
+            {errorDetails?.content && (
+              <p className="text-sm text-gray-400 mb-4 font-mono truncate max-w-md mx-auto">
+                {errorDetails.content}
+              </p>
+            )}
+            {!errorDetails?.content && <div className="mb-4" />}
             <button
               onClick={() => {
                 setUploadState('idle');
+                setError(null);
+                setErrorDetails(null);
                 setIsRetry(true);
               }}
               className="bg-red-600 hover:bg-red-700 text-white font-minecraft px-4 py-2 rounded-lg transition-colors cursor-pointer"
