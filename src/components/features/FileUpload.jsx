@@ -5,6 +5,7 @@ import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
 import Loader from '@/components/ui/Loader';
 import { parseTxtFile, parseJsonFile } from '@/lib/parsing';
+import Image from 'next/image';
 
 export default function FileUpload({ onFileProcessed }) {
   const [uploadState, setUploadState] = useState('idle');
@@ -129,7 +130,7 @@ export default function FileUpload({ onFileProcessed }) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: isRetry ? 0.1 : 1.4 }}
             >
-              <img 
+              <Image
                 src="/images/enchanted_book.gif" 
                 alt="Upload file" 
                 className="w-16 h-16 object-contain"
